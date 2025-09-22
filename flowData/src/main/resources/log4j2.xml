@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <!-- 控制台输出 Appender -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- 使用 PatternLayout 配合 %highlight 来高亮显示日志级别 -->
+            <!-- 设置属性disableAnsi为false,表示开启Ansi，这样才会输出有样式的日志 -->
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss} [%p] %highlight{%msg%n}{FATAL=red, ERROR=red, WARN=yellow, INFO=green, DEBUG=blue, TRACE=magenta}"
+                    disableAnsi="false" />
+        </Console>
+
+        <!-- 文件输出 Appender -->
+        <File name="File" fileName="logs/app.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} - %msg%n" />
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <!-- 根日志配置 -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </Root>
+    </Loggers>
+</Configuration>
