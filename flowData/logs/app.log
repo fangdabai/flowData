@@ -3419,3 +3419,1193 @@ java.sql.SQLSyntaxErrorException: Unknown column 'online' in 'field list'
 2025-09-22 20:01:49 - HikariPool-1 - Start completed.
 2025-09-22 20:02:03 - HikariPool-1 - Shutdown initiated...
 2025-09-22 20:02:03 - HikariPool-1 - Shutdown completed.
+2025-09-23 08:17:29 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 5532 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 08:17:29 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 08:17:30 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 08:17:30 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:17:30 - Starting service [Tomcat]
+2025-09-23 08:17:30 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 08:17:30 - Initializing Spring embedded WebApplicationContext
+2025-09-23 08:17:30 - Root WebApplicationContext: initialization completed in 637 ms
+2025-09-23 08:17:31 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 08:17:31 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:17:31 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 08:17:31 - Started Main in 1.645 seconds (JVM running for 2.207)
+2025-09-23 08:18:04 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 17804 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 08:18:05 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 08:18:05 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 08:18:05 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:18:05 - Starting service [Tomcat]
+2025-09-23 08:18:05 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 08:18:05 - Initializing Spring embedded WebApplicationContext
+2025-09-23 08:18:05 - Root WebApplicationContext: initialization completed in 621 ms
+2025-09-23 08:18:06 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 08:18:06 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:18:06 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 08:18:06 - Started Main in 1.638 seconds (JVM running for 2.236)
+2025-09-23 08:18:10 - HikariPool-1 - Starting...
+2025-09-23 08:18:10 - HikariPool-1 - Start completed.
+2025-09-23 08:18:22 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 08:18:22 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 08:18:22 - Completed initialization in 0 ms
+2025-09-23 08:21:12 - HikariPool-1 - Shutdown initiated...
+2025-09-23 08:21:12 - HikariPool-1 - Shutdown completed.
+2025-09-23 08:21:14 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 1392 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 08:21:14 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 08:21:15 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 08:21:15 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:21:15 - Starting service [Tomcat]
+2025-09-23 08:21:15 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 08:21:15 - Initializing Spring embedded WebApplicationContext
+2025-09-23 08:21:15 - Root WebApplicationContext: initialization completed in 575 ms
+2025-09-23 08:21:15 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 08:21:15 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:21:15 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 08:21:15 - Started Main in 1.577 seconds (JVM running for 2.281)
+2025-09-23 08:21:20 - HikariPool-1 - Starting...
+2025-09-23 08:21:20 - HikariPool-1 - Start completed.
+2025-09-23 08:21:24 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 08:21:24 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 08:21:24 - Completed initialization in 1 ms
+2025-09-23 08:44:46 - HikariPool-1 - Shutdown initiated...
+2025-09-23 08:44:46 - HikariPool-1 - Shutdown completed.
+2025-09-23 08:44:48 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 12852 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 08:44:48 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 08:44:48 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 08:44:48 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:44:48 - Starting service [Tomcat]
+2025-09-23 08:44:48 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 08:44:48 - Initializing Spring embedded WebApplicationContext
+2025-09-23 08:44:48 - Root WebApplicationContext: initialization completed in 579 ms
+2025-09-23 08:44:49 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 08:44:49 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:44:49 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 08:44:49 - Started Main in 1.57 seconds (JVM running for 2.211)
+2025-09-23 08:44:51 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 08:44:51 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 08:44:51 - Completed initialization in 1 ms
+2025-09-23 08:44:53 - HikariPool-1 - Starting...
+2025-09-23 08:44:53 - HikariPool-1 - Start completed.
+2025-09-23 08:45:21 - HikariPool-1 - Shutdown initiated...
+2025-09-23 08:45:21 - HikariPool-1 - Shutdown completed.
+2025-09-23 08:45:23 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 4524 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 08:45:23 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 08:45:23 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 08:45:23 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:45:23 - Starting service [Tomcat]
+2025-09-23 08:45:23 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 08:45:23 - Initializing Spring embedded WebApplicationContext
+2025-09-23 08:45:23 - Root WebApplicationContext: initialization completed in 566 ms
+2025-09-23 08:45:24 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 08:45:24 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:45:24 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 08:45:24 - Started Main in 1.565 seconds (JVM running for 2.159)
+2025-09-23 08:45:27 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 08:45:27 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 08:45:27 - Completed initialization in 1 ms
+2025-09-23 08:45:28 - HikariPool-1 - Starting...
+2025-09-23 08:45:28 - HikariPool-1 - Start completed.
+2025-09-23 08:46:17 - HikariPool-1 - Shutdown initiated...
+2025-09-23 08:46:17 - HikariPool-1 - Shutdown completed.
+2025-09-23 08:46:20 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 4120 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 08:46:20 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 08:46:21 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 08:46:21 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:46:21 - Starting service [Tomcat]
+2025-09-23 08:46:21 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 08:46:21 - Initializing Spring embedded WebApplicationContext
+2025-09-23 08:46:21 - Root WebApplicationContext: initialization completed in 641 ms
+2025-09-23 08:46:21 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 08:46:21 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:46:21 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 08:46:21 - Started Main in 1.635 seconds (JVM running for 2.269)
+2025-09-23 08:46:21 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 08:46:21 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 08:46:21 - Completed initialization in 0 ms
+2025-09-23 08:46:25 - HikariPool-1 - Starting...
+2025-09-23 08:46:26 - HikariPool-1 - Start completed.
+2025-09-23 08:47:05 - HikariPool-1 - Shutdown initiated...
+2025-09-23 08:47:05 - HikariPool-1 - Shutdown completed.
+2025-09-23 08:51:44 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 5828 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 08:51:44 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 08:51:44 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 08:51:44 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:51:44 - Starting service [Tomcat]
+2025-09-23 08:51:44 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 08:51:44 - Initializing Spring embedded WebApplicationContext
+2025-09-23 08:51:44 - Root WebApplicationContext: initialization completed in 591 ms
+2025-09-23 08:51:45 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 08:51:45 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:51:45 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 08:51:45 - Started Main in 1.56 seconds (JVM running for 2.123)
+2025-09-23 08:51:46 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 08:51:46 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 08:51:46 - Completed initialization in 1 ms
+2025-09-23 08:51:46 - HikariPool-1 - Starting...
+2025-09-23 08:51:46 - HikariPool-1 - Start completed.
+2025-09-23 08:53:01 - HikariPool-1 - Shutdown initiated...
+2025-09-23 08:53:01 - HikariPool-1 - Shutdown completed.
+2025-09-23 08:55:51 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 20900 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 08:55:51 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 08:55:51 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 08:55:51 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:55:51 - Starting service [Tomcat]
+2025-09-23 08:55:51 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 08:55:51 - Initializing Spring embedded WebApplicationContext
+2025-09-23 08:55:51 - Root WebApplicationContext: initialization completed in 575 ms
+2025-09-23 08:55:52 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 08:55:52 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:55:52 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 08:55:52 - Started Main in 1.583 seconds (JVM running for 2.133)
+2025-09-23 08:55:53 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 08:55:53 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 08:55:53 - Completed initialization in 0 ms
+2025-09-23 08:55:53 - HikariPool-1 - Starting...
+2025-09-23 08:55:53 - HikariPool-1 - Start completed.
+2025-09-23 08:56:58 - HikariPool-1 - Shutdown initiated...
+2025-09-23 08:56:58 - HikariPool-1 - Shutdown completed.
+2025-09-23 08:57:00 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 10256 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 08:57:00 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 08:57:01 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 08:57:01 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:57:01 - Starting service [Tomcat]
+2025-09-23 08:57:01 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 08:57:01 - Initializing Spring embedded WebApplicationContext
+2025-09-23 08:57:01 - Root WebApplicationContext: initialization completed in 632 ms
+2025-09-23 08:57:01 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 08:57:02 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:57:02 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 08:57:02 - Started Main in 1.663 seconds (JVM running for 2.277)
+2025-09-23 08:57:02 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 08:57:02 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 08:57:02 - Completed initialization in 0 ms
+2025-09-23 08:57:02 - HikariPool-1 - Starting...
+2025-09-23 08:57:02 - HikariPool-1 - Start completed.
+2025-09-23 08:58:49 - HikariPool-1 - Shutdown initiated...
+2025-09-23 08:58:49 - HikariPool-1 - Shutdown completed.
+2025-09-23 08:59:49 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 15012 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 08:59:49 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 08:59:49 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 08:59:49 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:59:49 - Starting service [Tomcat]
+2025-09-23 08:59:49 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 08:59:50 - Initializing Spring embedded WebApplicationContext
+2025-09-23 08:59:50 - Root WebApplicationContext: initialization completed in 576 ms
+2025-09-23 08:59:50 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 08:59:50 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 08:59:50 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 08:59:50 - Started Main in 1.55 seconds (JVM running for 2.135)
+2025-09-23 08:59:52 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 08:59:52 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 08:59:52 - Completed initialization in 0 ms
+2025-09-23 08:59:52 - HikariPool-1 - Starting...
+2025-09-23 08:59:52 - HikariPool-1 - Start completed.
+2025-09-23 09:01:14 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:01:14 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:01:56 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 20248 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:01:56 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:01:56 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:01:56 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:01:56 - Starting service [Tomcat]
+2025-09-23 09:01:56 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:01:56 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:01:56 - Root WebApplicationContext: initialization completed in 560 ms
+2025-09-23 09:01:57 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:01:57 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:01:57 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:01:57 - Started Main in 1.548 seconds (JVM running for 2.071)
+2025-09-23 09:01:57 - HikariPool-1 - Starting...
+2025-09-23 09:01:57 - HikariPool-1 - Start completed.
+2025-09-23 09:02:09 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:02:09 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:02:09 - Completed initialization in 0 ms
+2025-09-23 09:02:45 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:02:45 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:12:03 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 3452 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:12:03 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:12:03 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:12:03 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:12:03 - Starting service [Tomcat]
+2025-09-23 09:12:03 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:12:03 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:12:03 - Root WebApplicationContext: initialization completed in 566 ms
+2025-09-23 09:12:04 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:12:04 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:12:04 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:12:04 - Started Main in 1.725 seconds (JVM running for 2.338)
+2025-09-23 09:12:04 - HikariPool-1 - Starting...
+2025-09-23 09:12:04 - HikariPool-1 - Start completed.
+2025-09-23 09:12:04 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:12:04 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:12:04 - Completed initialization in 1 ms
+2025-09-23 09:15:05 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:15:05 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:15:07 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 5536 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:15:07 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:15:08 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:15:08 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:15:08 - Starting service [Tomcat]
+2025-09-23 09:15:08 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:15:08 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:15:08 - Root WebApplicationContext: initialization completed in 584 ms
+2025-09-23 09:15:08 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:15:08 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:15:08 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:15:08 - Started Main in 1.607 seconds (JVM running for 2.308)
+2025-09-23 09:15:08 - HikariPool-1 - Starting...
+2025-09-23 09:15:09 - HikariPool-1 - Start completed.
+2025-09-23 09:15:09 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:15:09 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:15:09 - Completed initialization in 1 ms
+2025-09-23 09:21:22 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:21:22 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:21:24 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 21336 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:21:24 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:21:25 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:21:25 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:21:25 - Starting service [Tomcat]
+2025-09-23 09:21:25 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:21:25 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:21:25 - Root WebApplicationContext: initialization completed in 585 ms
+2025-09-23 09:21:26 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:21:26 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:21:26 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:21:26 - Started Main in 1.66 seconds (JVM running for 2.257)
+2025-09-23 09:21:26 - HikariPool-1 - Starting...
+2025-09-23 09:21:26 - HikariPool-1 - Start completed.
+2025-09-23 09:21:27 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:21:27 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:21:27 - Completed initialization in 0 ms
+2025-09-23 09:25:18 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:25:18 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:25:20 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 7564 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:25:20 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:25:20 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:25:20 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:25:20 - Starting service [Tomcat]
+2025-09-23 09:25:20 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:25:20 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:25:20 - Root WebApplicationContext: initialization completed in 602 ms
+2025-09-23 09:25:21 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:25:21 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:25:21 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:25:21 - Started Main in 1.621 seconds (JVM running for 2.253)
+2025-09-23 09:25:21 - HikariPool-1 - Starting...
+2025-09-23 09:25:21 - HikariPool-1 - Start completed.
+2025-09-23 09:25:25 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:25:25 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:25:25 - Completed initialization in 0 ms
+2025-09-23 09:25:50 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:25:50 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:28:53 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 20888 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:28:53 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:28:54 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:28:54 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:28:54 - Starting service [Tomcat]
+2025-09-23 09:28:54 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:28:54 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:28:54 - Root WebApplicationContext: initialization completed in 571 ms
+2025-09-23 09:28:55 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:28:55 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:28:55 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:28:55 - Started Main in 1.505 seconds (JVM running for 2.062)
+2025-09-23 09:28:55 - HikariPool-1 - Starting...
+2025-09-23 09:28:55 - HikariPool-1 - Start completed.
+2025-09-23 09:28:58 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:28:58 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:28:58 - Completed initialization in 0 ms
+2025-09-23 09:30:00 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:30:00 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:30:02 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 19172 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:30:02 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:30:03 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:30:03 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:30:03 - Starting service [Tomcat]
+2025-09-23 09:30:03 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:30:03 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:30:03 - Root WebApplicationContext: initialization completed in 584 ms
+2025-09-23 09:30:04 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:30:04 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:30:04 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:30:04 - Started Main in 1.564 seconds (JVM running for 2.204)
+2025-09-23 09:30:04 - HikariPool-1 - Starting...
+2025-09-23 09:30:04 - HikariPool-1 - Start completed.
+2025-09-23 09:30:04 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:30:04 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:30:04 - Completed initialization in 0 ms
+2025-09-23 09:32:49 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:32:49 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:32:51 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 7060 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:32:51 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:32:51 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:32:51 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:32:51 - Starting service [Tomcat]
+2025-09-23 09:32:51 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:32:51 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:32:51 - Root WebApplicationContext: initialization completed in 600 ms
+2025-09-23 09:32:52 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:32:52 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:32:52 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:32:52 - Started Main in 1.594 seconds (JVM running for 2.211)
+2025-09-23 09:32:52 - HikariPool-1 - Starting...
+2025-09-23 09:32:52 - HikariPool-1 - Start completed.
+2025-09-23 09:32:52 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:32:52 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:32:52 - Completed initialization in 0 ms
+2025-09-23 09:34:02 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:34:02 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:34:04 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 1536 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:34:04 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:34:05 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:34:05 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:34:05 - Starting service [Tomcat]
+2025-09-23 09:34:05 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:34:05 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:34:05 - Root WebApplicationContext: initialization completed in 575 ms
+2025-09-23 09:34:06 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:34:06 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:34:06 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:34:06 - Started Main in 1.586 seconds (JVM running for 2.243)
+2025-09-23 09:34:06 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:34:06 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:34:06 - Completed initialization in 1 ms
+2025-09-23 09:34:06 - HikariPool-1 - Starting...
+2025-09-23 09:34:06 - HikariPool-1 - Start completed.
+2025-09-23 09:35:31 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:35:31 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:35:33 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 20864 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:35:33 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:35:34 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:35:34 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:35:34 - Starting service [Tomcat]
+2025-09-23 09:35:34 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:35:34 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:35:34 - Root WebApplicationContext: initialization completed in 639 ms
+2025-09-23 09:35:35 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:35:35 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:35:35 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:35:35 - Started Main in 1.711 seconds (JVM running for 2.37)
+2025-09-23 09:35:35 - HikariPool-1 - Starting...
+2025-09-23 09:35:35 - HikariPool-1 - Start completed.
+2025-09-23 09:35:36 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:35:36 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:35:36 - Completed initialization in 1 ms
+2025-09-23 09:38:45 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:38:45 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:38:47 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 20700 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:38:47 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:38:47 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:38:47 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:38:47 - Starting service [Tomcat]
+2025-09-23 09:38:47 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:38:47 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:38:47 - Root WebApplicationContext: initialization completed in 657 ms
+2025-09-23 09:38:48 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:38:48 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:38:48 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:38:48 - Started Main in 1.702 seconds (JVM running for 2.305)
+2025-09-23 09:38:48 - HikariPool-1 - Starting...
+2025-09-23 09:38:48 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:38:48 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:38:48 - Completed initialization in 1 ms
+2025-09-23 09:38:48 - HikariPool-1 - Start completed.
+2025-09-23 09:39:06 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:39:06 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:39:08 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 9784 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:39:08 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:39:08 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:39:08 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:39:08 - Starting service [Tomcat]
+2025-09-23 09:39:08 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:39:08 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:39:08 - Root WebApplicationContext: initialization completed in 585 ms
+2025-09-23 09:39:09 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:39:09 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:39:09 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:39:09 - Started Main in 1.543 seconds (JVM running for 2.161)
+2025-09-23 09:39:09 - HikariPool-1 - Starting...
+2025-09-23 09:39:09 - HikariPool-1 - Start completed.
+2025-09-23 09:39:10 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:39:10 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:39:10 - Completed initialization in 0 ms
+2025-09-23 09:41:29 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:41:29 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:41:31 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 18332 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:41:31 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:41:31 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:41:31 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:41:31 - Starting service [Tomcat]
+2025-09-23 09:41:31 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:41:31 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:41:31 - Root WebApplicationContext: initialization completed in 586 ms
+2025-09-23 09:41:32 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:41:32 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:41:32 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:41:32 - Started Main in 1.542 seconds (JVM running for 2.104)
+2025-09-23 09:41:32 - HikariPool-1 - Starting...
+2025-09-23 09:41:32 - HikariPool-1 - Start completed.
+2025-09-23 09:41:32 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:41:32 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:41:32 - Completed initialization in 1 ms
+2025-09-23 09:43:40 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:43:40 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:43:42 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 3084 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:43:42 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:43:43 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:43:43 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:43:43 - Starting service [Tomcat]
+2025-09-23 09:43:43 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:43:43 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:43:43 - Root WebApplicationContext: initialization completed in 629 ms
+2025-09-23 09:43:44 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:43:44 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:43:44 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:43:44 - Started Main in 1.667 seconds (JVM running for 2.253)
+2025-09-23 09:43:44 - HikariPool-1 - Starting...
+2025-09-23 09:43:44 - HikariPool-1 - Start completed.
+2025-09-23 09:43:44 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:43:44 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:43:44 - Completed initialization in 1 ms
+2025-09-23 09:44:11 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:44:11 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:44:13 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 16668 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:44:13 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:44:13 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:44:13 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:44:13 - Starting service [Tomcat]
+2025-09-23 09:44:13 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:44:14 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:44:14 - Root WebApplicationContext: initialization completed in 580 ms
+2025-09-23 09:44:14 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:44:14 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:44:14 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:44:14 - Started Main in 1.53 seconds (JVM running for 2.205)
+2025-09-23 09:44:14 - HikariPool-1 - Starting...
+2025-09-23 09:44:14 - HikariPool-1 - Start completed.
+2025-09-23 09:44:14 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:44:14 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:44:14 - Completed initialization in 0 ms
+2025-09-23 09:46:31 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:46:31 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:46:33 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 11392 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:46:33 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:46:34 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:46:34 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:46:34 - Starting service [Tomcat]
+2025-09-23 09:46:34 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:46:34 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:46:34 - Root WebApplicationContext: initialization completed in 592 ms
+2025-09-23 09:46:34 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:46:34 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:46:34 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:46:34 - Started Main in 1.572 seconds (JVM running for 2.116)
+2025-09-23 09:46:34 - HikariPool-1 - Starting...
+2025-09-23 09:46:35 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:46:35 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:46:35 - Completed initialization in 0 ms
+2025-09-23 09:46:35 - HikariPool-1 - Start completed.
+2025-09-23 09:48:00 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:48:00 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:48:02 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 11480 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:48:02 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:48:02 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:48:02 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:48:02 - Starting service [Tomcat]
+2025-09-23 09:48:02 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:48:02 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:48:02 - Root WebApplicationContext: initialization completed in 595 ms
+2025-09-23 09:48:03 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:48:03 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:48:03 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:48:03 - Started Main in 1.568 seconds (JVM running for 2.2)
+2025-09-23 09:48:03 - HikariPool-1 - Starting...
+2025-09-23 09:48:03 - HikariPool-1 - Start completed.
+2025-09-23 09:48:03 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:48:03 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:48:03 - Completed initialization in 0 ms
+2025-09-23 09:51:32 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:51:32 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:51:34 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 4672 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:51:34 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:51:35 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:51:35 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:51:35 - Starting service [Tomcat]
+2025-09-23 09:51:35 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:51:35 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:51:35 - Root WebApplicationContext: initialization completed in 600 ms
+2025-09-23 09:51:36 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:51:36 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:51:36 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:51:36 - Started Main in 1.711 seconds (JVM running for 2.32)
+2025-09-23 09:51:36 - HikariPool-1 - Starting...
+2025-09-23 09:51:36 - HikariPool-1 - Start completed.
+2025-09-23 09:51:36 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:51:36 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:51:36 - Completed initialization in 0 ms
+2025-09-23 09:54:47 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:54:47 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:54:49 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 2512 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:54:49 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:54:49 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:54:49 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:54:49 - Starting service [Tomcat]
+2025-09-23 09:54:49 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:54:49 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:54:49 - Root WebApplicationContext: initialization completed in 613 ms
+2025-09-23 09:54:50 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:54:50 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:54:50 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:54:50 - Started Main in 1.583 seconds (JVM running for 2.324)
+2025-09-23 09:54:50 - HikariPool-1 - Starting...
+2025-09-23 09:54:50 - HikariPool-1 - Start completed.
+2025-09-23 09:54:52 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:54:52 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:54:52 - Completed initialization in 1 ms
+2025-09-23 09:56:31 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:56:31 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:56:33 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 14520 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:56:33 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:56:33 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:56:33 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:56:33 - Starting service [Tomcat]
+2025-09-23 09:56:33 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:56:33 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:56:33 - Root WebApplicationContext: initialization completed in 575 ms
+2025-09-23 09:56:34 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:56:34 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:56:34 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:56:34 - Started Main in 1.56 seconds (JVM running for 2.213)
+2025-09-23 09:56:34 - HikariPool-1 - Starting...
+2025-09-23 09:56:34 - HikariPool-1 - Start completed.
+2025-09-23 09:56:34 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:56:34 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:56:34 - Completed initialization in 0 ms
+2025-09-23 09:57:45 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:57:45 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:57:47 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 8052 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:57:47 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:57:48 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:57:48 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:57:48 - Starting service [Tomcat]
+2025-09-23 09:57:48 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:57:48 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:57:48 - Root WebApplicationContext: initialization completed in 600 ms
+2025-09-23 09:57:49 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:57:49 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:57:49 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:57:49 - Started Main in 1.619 seconds (JVM running for 2.312)
+2025-09-23 09:57:49 - HikariPool-1 - Starting...
+2025-09-23 09:57:49 - HikariPool-1 - Start completed.
+2025-09-23 09:57:49 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:57:49 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:57:49 - Completed initialization in 1 ms
+2025-09-23 09:58:26 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:58:26 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:58:28 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 4372 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:58:28 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:58:28 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:58:28 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:58:28 - Starting service [Tomcat]
+2025-09-23 09:58:28 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:58:28 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:58:28 - Root WebApplicationContext: initialization completed in 578 ms
+2025-09-23 09:58:29 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:58:29 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:58:29 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:58:29 - Started Main in 1.536 seconds (JVM running for 2.093)
+2025-09-23 09:58:29 - HikariPool-1 - Starting...
+2025-09-23 09:58:29 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:58:29 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:58:29 - Completed initialization in 1 ms
+2025-09-23 09:58:29 - HikariPool-1 - Start completed.
+2025-09-23 09:59:35 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:59:35 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:59:37 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 16228 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:59:37 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:59:38 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:59:38 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:59:38 - Starting service [Tomcat]
+2025-09-23 09:59:38 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:59:38 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:59:38 - Root WebApplicationContext: initialization completed in 598 ms
+2025-09-23 09:59:38 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:59:38 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:59:38 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:59:38 - Started Main in 1.629 seconds (JVM running for 2.243)
+2025-09-23 09:59:38 - HikariPool-1 - Starting...
+2025-09-23 09:59:39 - HikariPool-1 - Start completed.
+2025-09-23 09:59:40 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:59:40 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:59:40 - Completed initialization in 1 ms
+2025-09-23 09:59:54 - HikariPool-1 - Shutdown initiated...
+2025-09-23 09:59:54 - HikariPool-1 - Shutdown completed.
+2025-09-23 09:59:56 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 5340 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 09:59:56 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 09:59:56 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 09:59:56 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:59:56 - Starting service [Tomcat]
+2025-09-23 09:59:56 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 09:59:56 - Initializing Spring embedded WebApplicationContext
+2025-09-23 09:59:56 - Root WebApplicationContext: initialization completed in 629 ms
+2025-09-23 09:59:57 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 09:59:57 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 09:59:57 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 09:59:57 - Started Main in 1.774 seconds (JVM running for 2.45)
+2025-09-23 09:59:57 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 09:59:57 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 09:59:57 - Completed initialization in 0 ms
+2025-09-23 09:59:57 - HikariPool-1 - Starting...
+2025-09-23 09:59:57 - HikariPool-1 - Start completed.
+2025-09-23 10:01:14 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:01:14 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:01:16 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 19272 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:01:16 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:01:17 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:01:17 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:01:17 - Starting service [Tomcat]
+2025-09-23 10:01:17 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:01:17 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:01:17 - Root WebApplicationContext: initialization completed in 566 ms
+2025-09-23 10:01:17 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:01:17 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:01:17 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:01:17 - Started Main in 1.537 seconds (JVM running for 2.125)
+2025-09-23 10:01:17 - HikariPool-1 - Starting...
+2025-09-23 10:01:17 - HikariPool-1 - Start completed.
+2025-09-23 10:01:17 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:01:17 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:01:17 - Completed initialization in 0 ms
+2025-09-23 10:02:23 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:02:23 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:02:25 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 4668 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:02:25 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:02:26 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:02:26 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:02:26 - Starting service [Tomcat]
+2025-09-23 10:02:26 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:02:26 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:02:26 - Root WebApplicationContext: initialization completed in 580 ms
+2025-09-23 10:02:27 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:02:27 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:02:27 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:02:27 - Started Main in 1.676 seconds (JVM running for 2.311)
+2025-09-23 10:02:27 - HikariPool-1 - Starting...
+2025-09-23 10:02:27 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:02:27 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:02:27 - Completed initialization in 0 ms
+2025-09-23 10:02:27 - HikariPool-1 - Start completed.
+2025-09-23 10:07:09 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:07:09 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:07:11 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 16228 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:07:11 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:07:12 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:07:12 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:07:12 - Starting service [Tomcat]
+2025-09-23 10:07:12 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:07:12 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:07:12 - Root WebApplicationContext: initialization completed in 601 ms
+2025-09-23 10:07:13 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:07:13 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:07:13 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:07:13 - Started Main in 1.596 seconds (JVM running for 2.202)
+2025-09-23 10:07:13 - HikariPool-1 - Starting...
+2025-09-23 10:07:13 - HikariPool-1 - Start completed.
+2025-09-23 10:07:13 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:07:13 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:07:13 - Completed initialization in 1 ms
+2025-09-23 10:07:51 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:07:51 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:07:53 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 5208 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:07:53 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:07:54 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:07:54 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:07:54 - Starting service [Tomcat]
+2025-09-23 10:07:54 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:07:54 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:07:54 - Root WebApplicationContext: initialization completed in 567 ms
+2025-09-23 10:07:54 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:07:55 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:07:55 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:07:55 - Started Main in 1.533 seconds (JVM running for 2.158)
+2025-09-23 10:07:55 - HikariPool-1 - Starting...
+2025-09-23 10:07:55 - HikariPool-1 - Start completed.
+2025-09-23 10:07:55 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:07:55 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:07:55 - Completed initialization in 0 ms
+2025-09-23 10:08:58 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:08:58 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:09:00 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 7448 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:09:00 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:09:00 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:09:00 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:09:00 - Starting service [Tomcat]
+2025-09-23 10:09:00 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:09:00 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:09:00 - Root WebApplicationContext: initialization completed in 561 ms
+2025-09-23 10:09:01 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:09:01 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:09:01 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:09:01 - Started Main in 1.515 seconds (JVM running for 2.12)
+2025-09-23 10:09:01 - HikariPool-1 - Starting...
+2025-09-23 10:09:01 - HikariPool-1 - Start completed.
+2025-09-23 10:09:06 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:09:06 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:09:06 - Completed initialization in 0 ms
+2025-09-23 10:11:30 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:11:30 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:11:33 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 10868 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:11:33 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:11:33 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:11:33 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:11:33 - Starting service [Tomcat]
+2025-09-23 10:11:33 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:11:33 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:11:33 - Root WebApplicationContext: initialization completed in 592 ms
+2025-09-23 10:11:34 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:11:34 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:11:34 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:11:34 - Started Main in 1.572 seconds (JVM running for 2.219)
+2025-09-23 10:11:34 - HikariPool-1 - Starting...
+2025-09-23 10:11:34 - HikariPool-1 - Start completed.
+2025-09-23 10:11:35 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:11:35 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:11:35 - Completed initialization in 1 ms
+2025-09-23 10:14:19 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:14:19 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:14:21 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 4036 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:14:21 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:14:22 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:14:22 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:14:22 - Starting service [Tomcat]
+2025-09-23 10:14:22 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:14:22 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:14:22 - Root WebApplicationContext: initialization completed in 613 ms
+2025-09-23 10:14:22 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:14:22 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:14:22 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:14:22 - Started Main in 1.657 seconds (JVM running for 2.227)
+2025-09-23 10:14:22 - HikariPool-1 - Starting...
+2025-09-23 10:14:23 - HikariPool-1 - Start completed.
+2025-09-23 10:14:25 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:14:25 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:14:25 - Completed initialization in 1 ms
+2025-09-23 10:24:47 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:24:47 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:24:49 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 14504 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:24:49 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:24:50 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:24:50 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:24:50 - Starting service [Tomcat]
+2025-09-23 10:24:50 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:24:50 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:24:50 - Root WebApplicationContext: initialization completed in 579 ms
+2025-09-23 10:24:51 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:24:51 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:24:51 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:24:51 - Started Main in 1.577 seconds (JVM running for 2.23)
+2025-09-23 10:24:51 - HikariPool-1 - Starting...
+2025-09-23 10:24:51 - HikariPool-1 - Start completed.
+2025-09-23 10:24:51 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:24:51 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:24:51 - Completed initialization in 1 ms
+2025-09-23 10:25:22 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:25:22 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:25:24 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 4496 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:25:24 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:25:24 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:25:24 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:25:24 - Starting service [Tomcat]
+2025-09-23 10:25:24 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:25:24 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:25:24 - Root WebApplicationContext: initialization completed in 581 ms
+2025-09-23 10:25:25 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:25:25 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:25:25 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:25:25 - Started Main in 1.612 seconds (JVM running for 2.174)
+2025-09-23 10:25:25 - HikariPool-1 - Starting...
+2025-09-23 10:25:25 - HikariPool-1 - Start completed.
+2025-09-23 10:25:30 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:25:30 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:25:30 - Completed initialization in 1 ms
+2025-09-23 10:32:01 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:32:01 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:32:03 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 11248 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:32:03 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:32:03 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:32:03 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:32:03 - Starting service [Tomcat]
+2025-09-23 10:32:03 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:32:03 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:32:03 - Root WebApplicationContext: initialization completed in 628 ms
+2025-09-23 10:32:04 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:32:04 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:32:04 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:32:04 - Started Main in 1.625 seconds (JVM running for 2.281)
+2025-09-23 10:32:04 - HikariPool-1 - Starting...
+2025-09-23 10:32:04 - HikariPool-1 - Start completed.
+2025-09-23 10:32:04 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:32:04 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:32:04 - Completed initialization in 1 ms
+2025-09-23 10:32:20 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:32:20 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:32:22 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 13500 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:32:22 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:32:22 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:32:22 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:32:22 - Starting service [Tomcat]
+2025-09-23 10:32:22 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:32:22 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:32:22 - Root WebApplicationContext: initialization completed in 570 ms
+2025-09-23 10:32:23 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:32:23 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:32:23 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:32:23 - Started Main in 1.518 seconds (JVM running for 2.159)
+2025-09-23 10:32:23 - HikariPool-1 - Starting...
+2025-09-23 10:32:23 - HikariPool-1 - Start completed.
+2025-09-23 10:32:23 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:32:23 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:32:23 - Completed initialization in 0 ms
+2025-09-23 10:36:12 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:36:12 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:36:14 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 15900 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:36:14 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:36:15 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:36:15 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:36:15 - Starting service [Tomcat]
+2025-09-23 10:36:15 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:36:15 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:36:15 - Root WebApplicationContext: initialization completed in 600 ms
+2025-09-23 10:36:15 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:36:15 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:36:15 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:36:15 - Started Main in 1.554 seconds (JVM running for 2.186)
+2025-09-23 10:36:15 - HikariPool-1 - Starting...
+2025-09-23 10:36:16 - HikariPool-1 - Start completed.
+2025-09-23 10:36:16 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:36:16 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:36:16 - Completed initialization in 0 ms
+2025-09-23 10:43:02 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:43:02 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:43:04 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 1240 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:43:04 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:43:04 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:43:04 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:43:04 - Starting service [Tomcat]
+2025-09-23 10:43:04 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:43:04 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:43:04 - Root WebApplicationContext: initialization completed in 586 ms
+2025-09-23 10:43:05 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:43:05 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:43:05 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:43:05 - Started Main in 1.727 seconds (JVM running for 2.459)
+2025-09-23 10:43:05 - HikariPool-1 - Starting...
+2025-09-23 10:43:05 - HikariPool-1 - Start completed.
+2025-09-23 10:43:05 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:43:05 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:43:05 - Completed initialization in 1 ms
+2025-09-23 10:47:53 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:47:53 - HikariPool-1 - Shutdown completed.
+2025-09-23 10:51:59 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 3896 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 10:51:59 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 10:51:59 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 10:51:59 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:51:59 - Starting service [Tomcat]
+2025-09-23 10:51:59 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 10:51:59 - Initializing Spring embedded WebApplicationContext
+2025-09-23 10:51:59 - Root WebApplicationContext: initialization completed in 566 ms
+2025-09-23 10:52:00 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 10:52:00 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 10:52:00 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 10:52:00 - Started Main in 1.519 seconds (JVM running for 2.129)
+2025-09-23 10:52:00 - HikariPool-1 - Starting...
+2025-09-23 10:52:00 - HikariPool-1 - Start completed.
+2025-09-23 10:52:11 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 10:52:11 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 10:52:11 - Completed initialization in 1 ms
+2025-09-23 10:58:50 - HikariPool-1 - Shutdown initiated...
+2025-09-23 10:58:50 - HikariPool-1 - Shutdown completed.
+2025-09-23 13:23:09 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 15408 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 13:23:09 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 13:23:10 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 13:23:10 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 13:23:10 - Starting service [Tomcat]
+2025-09-23 13:23:10 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 13:23:10 - Initializing Spring embedded WebApplicationContext
+2025-09-23 13:23:10 - Root WebApplicationContext: initialization completed in 711 ms
+2025-09-23 13:23:11 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 13:23:11 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 13:23:11 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 13:23:11 - Started Main in 1.756 seconds (JVM running for 2.487)
+2025-09-23 13:23:11 - HikariPool-1 - Starting...
+2025-09-23 13:23:11 - HikariPool-1 - Start completed.
+2025-09-23 13:23:15 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 13:23:15 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 13:23:15 - Completed initialization in 1 ms
+2025-09-23 13:36:34 - HikariPool-1 - Shutdown initiated...
+2025-09-23 13:36:34 - HikariPool-1 - Shutdown completed.
+2025-09-23 13:36:36 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 19736 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 13:36:36 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 13:36:37 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 13:36:37 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 13:36:37 - Starting service [Tomcat]
+2025-09-23 13:36:37 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 13:36:37 - Initializing Spring embedded WebApplicationContext
+2025-09-23 13:36:37 - Root WebApplicationContext: initialization completed in 616 ms
+2025-09-23 13:36:38 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 13:36:38 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 13:36:38 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 13:36:38 - Started Main in 1.625 seconds (JVM running for 2.275)
+2025-09-23 13:36:38 - HikariPool-1 - Starting...
+2025-09-23 13:36:38 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 13:36:38 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 13:36:38 - Completed initialization in 0 ms
+2025-09-23 13:36:38 - HikariPool-1 - Start completed.
+2025-09-23 13:43:51 - HikariPool-1 - Shutdown initiated...
+2025-09-23 13:43:51 - HikariPool-1 - Shutdown completed.
+2025-09-23 13:43:53 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 10104 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 13:43:53 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 13:43:54 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 13:43:54 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 13:43:54 - Starting service [Tomcat]
+2025-09-23 13:43:54 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 13:43:54 - Initializing Spring embedded WebApplicationContext
+2025-09-23 13:43:54 - Root WebApplicationContext: initialization completed in 632 ms
+2025-09-23 13:43:54 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 13:43:54 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 13:43:54 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 13:43:54 - Started Main in 1.655 seconds (JVM running for 2.238)
+2025-09-23 13:43:54 - HikariPool-1 - Starting...
+2025-09-23 13:43:55 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 13:43:55 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 13:43:55 - Completed initialization in 1 ms
+2025-09-23 13:43:55 - HikariPool-1 - Start completed.
+2025-09-23 13:50:59 - HikariPool-1 - Shutdown initiated...
+2025-09-23 13:50:59 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:28:18 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 21004 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:28:18 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:28:18 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:28:18 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:28:18 - Starting service [Tomcat]
+2025-09-23 16:28:18 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:28:18 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:28:18 - Root WebApplicationContext: initialization completed in 629 ms
+2025-09-23 16:28:19 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:28:19 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:28:19 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:28:19 - Started Main in 1.599 seconds (JVM running for 2.203)
+2025-09-23 16:28:19 - HikariPool-1 - Starting...
+2025-09-23 16:28:19 - HikariPool-1 - Start completed.
+2025-09-23 16:28:23 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:28:23 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:28:23 - Completed initialization in 0 ms
+2025-09-23 16:29:37 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:29:37 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:29:39 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 22368 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:29:39 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:29:40 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:29:40 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:29:40 - Starting service [Tomcat]
+2025-09-23 16:29:40 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:29:40 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:29:40 - Root WebApplicationContext: initialization completed in 625 ms
+2025-09-23 16:29:40 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:29:41 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:29:41 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:29:41 - Started Main in 1.826 seconds (JVM running for 2.518)
+2025-09-23 16:29:41 - HikariPool-1 - Starting...
+2025-09-23 16:29:41 - HikariPool-1 - Start completed.
+2025-09-23 16:29:48 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:29:48 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:29:48 - Completed initialization in 1 ms
+2025-09-23 16:33:56 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:33:56 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:33:58 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 20500 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:33:58 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:33:59 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:33:59 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:33:59 - Starting service [Tomcat]
+2025-09-23 16:33:59 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:33:59 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:33:59 - Root WebApplicationContext: initialization completed in 593 ms
+2025-09-23 16:34:00 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:34:00 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:34:00 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:34:00 - Started Main in 1.645 seconds (JVM running for 2.301)
+2025-09-23 16:34:00 - HikariPool-1 - Starting...
+2025-09-23 16:34:00 - HikariPool-1 - Start completed.
+2025-09-23 16:34:00 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:34:00 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:34:00 - Completed initialization in 1 ms
+2025-09-23 16:37:03 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:37:03 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:37:05 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 9764 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:37:05 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:37:06 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:37:06 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:37:06 - Starting service [Tomcat]
+2025-09-23 16:37:06 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:37:06 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:37:06 - Root WebApplicationContext: initialization completed in 603 ms
+2025-09-23 16:37:07 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:37:07 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:37:07 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:37:07 - Started Main in 1.644 seconds (JVM running for 2.248)
+2025-09-23 16:37:07 - HikariPool-1 - Starting...
+2025-09-23 16:37:07 - HikariPool-1 - Start completed.
+2025-09-23 16:37:08 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:37:08 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:37:08 - Completed initialization in 0 ms
+2025-09-23 16:39:43 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:39:43 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:41:15 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 20316 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:41:15 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:41:15 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:41:15 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:41:15 - Starting service [Tomcat]
+2025-09-23 16:41:15 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:41:15 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:41:15 - Root WebApplicationContext: initialization completed in 581 ms
+2025-09-23 16:41:16 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:41:16 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:41:16 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:41:16 - Started Main in 1.649 seconds (JVM running for 2.27)
+2025-09-23 16:41:16 - HikariPool-1 - Starting...
+2025-09-23 16:41:16 - HikariPool-1 - Start completed.
+2025-09-23 16:41:23 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:41:23 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:41:23 - Completed initialization in 1 ms
+2025-09-23 16:41:44 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:41:44 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:41:47 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 19840 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:41:47 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:41:47 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:41:47 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:41:47 - Starting service [Tomcat]
+2025-09-23 16:41:47 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:41:48 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:41:48 - Root WebApplicationContext: initialization completed in 640 ms
+2025-09-23 16:41:48 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:41:48 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:41:48 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:41:48 - Started Main in 1.688 seconds (JVM running for 2.583)
+2025-09-23 16:41:48 - HikariPool-1 - Starting...
+2025-09-23 16:41:48 - HikariPool-1 - Start completed.
+2025-09-23 16:41:53 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:41:53 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:41:53 - Completed initialization in 1 ms
+2025-09-23 16:43:59 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:43:59 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:44:01 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 16280 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:44:01 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:44:02 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:44:02 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:44:02 - Starting service [Tomcat]
+2025-09-23 16:44:02 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:44:02 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:44:02 - Root WebApplicationContext: initialization completed in 721 ms
+2025-09-23 16:44:03 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:44:03 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:44:03 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:44:03 - Started Main in 1.906 seconds (JVM running for 2.643)
+2025-09-23 16:44:03 - HikariPool-1 - Starting...
+2025-09-23 16:44:03 - HikariPool-1 - Start completed.
+2025-09-23 16:44:03 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:44:03 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:44:03 - Completed initialization in 1 ms
+2025-09-23 16:46:32 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:46:32 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:46:35 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 16484 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:46:35 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:46:36 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:46:36 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:46:36 - Starting service [Tomcat]
+2025-09-23 16:46:36 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:46:36 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:46:36 - Root WebApplicationContext: initialization completed in 659 ms
+2025-09-23 16:46:37 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:46:37 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:46:37 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:46:37 - Started Main in 1.855 seconds (JVM running for 2.518)
+2025-09-23 16:46:37 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:46:37 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:46:37 - Completed initialization in 0 ms
+2025-09-23 16:46:37 - HikariPool-1 - Starting...
+2025-09-23 16:46:37 - HikariPool-1 - Start completed.
+2025-09-23 16:51:10 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:51:10 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:51:12 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 3164 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:51:12 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:51:13 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:51:13 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:51:13 - Starting service [Tomcat]
+2025-09-23 16:51:13 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:51:13 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:51:13 - Root WebApplicationContext: initialization completed in 732 ms
+2025-09-23 16:51:14 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:51:14 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:51:14 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:51:14 - Started Main in 1.832 seconds (JVM running for 2.473)
+2025-09-23 16:51:14 - HikariPool-1 - Starting...
+2025-09-23 16:51:14 - HikariPool-1 - Start completed.
+2025-09-23 16:51:14 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:51:14 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:51:14 - Completed initialization in 1 ms
+2025-09-23 16:52:47 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:52:47 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:52:49 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 20928 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:52:49 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:52:50 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:52:50 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:52:50 - Starting service [Tomcat]
+2025-09-23 16:52:50 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:52:50 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:52:50 - Root WebApplicationContext: initialization completed in 771 ms
+2025-09-23 16:52:51 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:52:51 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:52:51 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:52:51 - Started Main in 1.94 seconds (JVM running for 2.61)
+2025-09-23 16:52:51 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:52:51 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:52:51 - Completed initialization in 1 ms
+2025-09-23 16:52:51 - HikariPool-1 - Starting...
+2025-09-23 16:52:51 - HikariPool-1 - Start completed.
+2025-09-23 16:55:47 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:55:47 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:55:49 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 22480 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:55:49 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:55:49 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:55:49 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:55:49 - Starting service [Tomcat]
+2025-09-23 16:55:49 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:55:49 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:55:49 - Root WebApplicationContext: initialization completed in 751 ms
+2025-09-23 16:55:50 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:55:50 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:55:50 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:55:50 - Started Main in 1.896 seconds (JVM running for 2.586)
+2025-09-23 16:55:50 - HikariPool-1 - Starting...
+2025-09-23 16:55:50 - HikariPool-1 - Start completed.
+2025-09-23 16:55:51 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:55:51 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:55:51 - Completed initialization in 0 ms
+2025-09-23 16:57:36 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:57:36 - HikariPool-1 - Shutdown completed.
+2025-09-23 16:57:38 - Starting Main using Java 1.8.0_131 on FXB-DELL with PID 12596 (C:\Users\fxb\Desktop\250922flowData\flowData\target\classes started by fxb in C:\Users\fxb\Desktop\250922flowData\flowData)
+2025-09-23 16:57:38 - No active profile set, falling back to 1 default profile: "default"
+2025-09-23 16:57:39 - Tomcat initialized with port(s): 8099 (http)
+2025-09-23 16:57:39 - Initializing ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:57:39 - Starting service [Tomcat]
+2025-09-23 16:57:39 - Starting Servlet engine: [Apache Tomcat/9.0.60]
+2025-09-23 16:57:39 - Initializing Spring embedded WebApplicationContext
+2025-09-23 16:57:39 - Root WebApplicationContext: initialization completed in 688 ms
+2025-09-23 16:57:40 - Adding welcome page: class path resource [static/index.html]
+2025-09-23 16:57:40 - Starting ProtocolHandler ["http-nio-0.0.0.0-8099"]
+2025-09-23 16:57:40 - Tomcat started on port(s): 8099 (http) with context path ''
+2025-09-23 16:57:40 - Started Main in 1.877 seconds (JVM running for 2.564)
+2025-09-23 16:57:40 - HikariPool-1 - Starting...
+2025-09-23 16:57:40 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-23 16:57:40 - Initializing Servlet 'dispatcherServlet'
+2025-09-23 16:57:40 - Completed initialization in 0 ms
+2025-09-23 16:57:40 - HikariPool-1 - Start completed.
+2025-09-23 16:58:05 - HikariPool-1 - Shutdown initiated...
+2025-09-23 16:58:05 - HikariPool-1 - Shutdown completed.

@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>流量计监控</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.prod.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.prod.js"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>-->
+    <script src="./js/lib/vue@3.4.21.js"></script>
+    <script src="./js/lib/axios.min.js"></script>
+    <script src="./js/lib/echarts.min.js"></script>
     <style>
 
         /* 全局清除默认 margin/padding */
@@ -43,312 +46,471 @@
     </style>
 </head>
 <body>
+
 <div id="app">
 
-    <h2>流量计监控</h2>
+    <!--流量计实时监控区-->
+    <div style="padding: 30px;background: linear-gradient(to right, #f9fafb, #f3f4f6);
+                border-radius: 12px;box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+                margin: 20px auto;max-width: 1600px; border: 1px solid #e5e7eb;">
+        <!--标题-->
+        <h2 style="text-align: center; margin-bottom: 25px; font-size: 24px; color: #111827;
+                   padding-bottom: 10px; border-bottom: 2px solid #d1d5db;">流量计实时监控</h2>
 
-    <!-- 实时数据 - 已修复色彩显示，浅绿=在线，浅红=掉线 -->
-    <div class="meter-status" style="display: flex; gap: 40px; justify-content: center; margin-top: 20px; width: 100%; max-width: 1500px; margin-left: auto; margin-right: auto;">
-        <!-- 流量计1 -->
-        <div class="meter-box"
-             :style="{
-             flex: 1,
-             padding: '15px',
-             borderRadius: '10px',
-             boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
-             backgroundColor: meter1.online ? '#f0fff4' : '#fff5f5',
-             position: 'relative'
-         }">
-            <h3 style="margin-bottom: 15px; font-size: 18px; color: #333; padding-right: 100px; text-align: left;">流量计 1</h3>
+        <!-- 实时数据 -->
+        <div style="display: flex; gap: 40px; justify-content: center; margin-top: 20px;
+                    width: 100%; max-width: 1300px; margin-left: auto; margin-right: auto;
+                    border-top: 1px dashed #d1d5db; padding-top: 20px;">
+            <!-- 流量计1 -->
             <div :style="{
-                position: 'absolute',
-                top: '15px',
-                right: '15px',
-                fontWeight: 'bold',
-                padding: '3px 8px',
-                borderRadius: '4px',
-                backgroundColor: meter1.online ? 'rgba(72, 187, 120, 0.2)' : 'rgba(248, 113, 113, 0.2)',
-                color: meter1.online ? '#059669' : '#dc2626',
-                textAlign: 'left'
-            }">
-                {{ meter1.online ? '通讯正常' : '通讯失败' }}
-            </div>
-
-            <div style="display: flex; gap: 15px; text-align: left;">
-                <!-- 左列 -->
-                <div style="flex: 2;">
-                    <p style="margin: 0 0 10px 0; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb;">质量流量: {{ meter1.massFlow ?? '--' }} t/h</p>
-                    <p style="margin: 0 0 10px 0; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb;">质量总量: {{ meter1.massTotal ?? '--' }} t</p>
-                    <p style="margin: 0 0 10px 0; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb;">体积流量: {{ meter1.volumeFlow ?? '--' }} m³/h</p>
-                    <p style="margin: 0; padding-bottom: 10px;">体积总量: {{ meter1.volumeTotal ?? '--' }} m³</p>
+                 flex: 1,
+                 padding: '15px',
+                 borderRadius: '10px',
+                 boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+                 backgroundColor: meter1.online ? '#f0fff4' : '#fff5f5',
+                 position: 'relative',
+                 border: '1px solid #e5e7eb'
+             }">
+                <h3 style="margin-bottom: 15px; font-size: 18px; color: #333;
+                           padding-right: 100px; text-align: left;
+                           border-bottom: 1px solid #e5e7eb; padding-bottom: 8px;">流量计 1</h3>
+                <div :style="{
+                    position: 'absolute',
+                    top: '15px',
+                    right: '15px',
+                    fontWeight: 'bold',
+                    padding: '3px 8px',
+                    borderRadius: '4px',
+                    backgroundColor: meter1.online ? 'rgba(72, 187, 120, 0.2)' : 'rgba(248, 113, 113, 0.2)',
+                    color: meter1.online ? '#059669' : '#dc2626',
+                    border: '1px solid #d1d5db'
+                }">
+                    {{ meter1.online ? '通讯正常' : '通讯失败' }}
                 </div>
 
-                <!-- 右列 -->
-                <div style="flex: 1;">
-                    <p style="margin: 0 0 10px 0; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb;">密度: {{ meter1.density ?? '--' }}</p>
-                    <p style="margin: 0; padding-bottom: 10px;">温度: {{ meter1.temperature ?? '--' }} ℃</p>
+                <div style="display: flex; gap: 15px; text-align: left;">
+                    <!-- 左列 -->
+                    <div style="flex: 2;">
+                        <p style="margin: 0 0 10px 0; padding-bottom: 8px; border-bottom: 1px dashed #e5e7eb;">质量流量: {{ meter1.massFlow ?? '--' }} t/h</p>
+                        <p style="margin: 0 0 10px 0; padding-bottom: 8px; border-bottom: 1px dashed #e5e7eb;">质量总量: {{ meter1.massTotal ?? '--' }} t</p>
+                        <p style="margin: 0 0 10px 0; padding-bottom: 8px; border-bottom: 1px dashed #e5e7eb;">体积流量: {{ meter1.volumeFlow ?? '--' }} m³/h</p>
+                        <p style="margin: 0;">体积总量: {{ meter1.volumeTotal ?? '--' }} m³</p>
+                    </div>
+                    <!-- 右列 -->
+                    <div style="flex: 1; border-left: 1px solid #e5e7eb; padding-left: 10px;">
+                        <p style="margin: 0 0 10px 0; padding-bottom: 8px; border-bottom: 1px dashed #e5e7eb;">密度: {{ meter1.density ?? '--' }}</p>
+                        <p style="margin: 0;">温度: {{ meter1.temperature ?? '--' }} ℃</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!-- 流量计2 -->
-        <div class="meter-box"
-             :style="{
-             flex: 1,
-             padding: '15px',
-             borderRadius: '10px',
-             boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
-             backgroundColor: meter2.online ? '#f0fff4' : '#fff5f5',
-             position: 'relative'
-         }">
-            <h3 style="margin-bottom: 15px; font-size: 18px; color: #333; padding-right: 100px; text-align: left;">流量计 2</h3>
+
+            <!-- 流量计2 -->
             <div :style="{
-                position: 'absolute',
-                top: '15px',
-                right: '15px',
-                fontWeight: 'bold',
-                padding: '3px 8px',
-                borderRadius: '4px',
-                backgroundColor: meter2.online ? 'rgba(72, 187, 120, 0.2)' : 'rgba(248, 113, 113, 0.2)',
-                color: meter2.online ? '#059669' : '#dc2626',
-                textAlign: 'left'
-            }">
-                {{ meter2.online ? '通讯正常' : '通讯失败' }}
-            </div>
-
-            <div style="display: flex; gap: 15px; text-align: left;">
-                <!-- 左列 -->
-                <div style="flex: 2;">
-                    <p style="margin: 0 0 10px 0; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb;">质量流量: {{ meter2.massFlow ?? '--' }} t/h</p>
-                    <p style="margin: 0 0 10px 0; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb;">质量总量: {{ meter2.massTotal ?? '--' }} t</p>
-                    <p style="margin: 0 0 10px 0; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb;">体积流量: {{ meter2.volumeFlow ?? '--' }} m³/h</p>
-                    <p style="margin: 0; padding-bottom: 10px;">体积总量: {{ meter2.volumeTotal ?? '--' }} m³</p>
+                 flex: 1,
+                 padding: '15px',
+                 borderRadius: '10px',
+                 boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+                 backgroundColor: meter2.online ? '#f0fff4' : '#fff5f5',
+                 position: 'relative',
+                 border: '1px solid #e5e7eb'
+             }">
+                <h3 style="margin-bottom: 15px; font-size: 18px; color: #333;
+                           padding-right: 100px; text-align: left;
+                           border-bottom: 1px solid #e5e7eb; padding-bottom: 8px;">流量计 2</h3>
+                <div :style="{
+                    position: 'absolute',
+                    top: '15px',
+                    right: '15px',
+                    fontWeight: 'bold',
+                    padding: '3px 8px',
+                    borderRadius: '4px',
+                    backgroundColor: meter2.online ? 'rgba(72, 187, 120, 0.2)' : 'rgba(248, 113, 113, 0.2)',
+                    color: meter2.online ? '#059669' : '#dc2626',
+                    border: '1px solid #d1d5db'
+                }">
+                    {{ meter2.online ? '通讯正常' : '通讯失败' }}
                 </div>
 
-                <!-- 右列 -->
-                <div style="flex: 1;">
-                    <p style="margin: 0 0 10px 0; padding-bottom: 10px; border-bottom: 1px solid #e5e7eb;">密度: {{ meter2.density ?? '--' }}</p>
-                    <p style="margin: 0; padding-bottom: 10px;">温度: {{ meter2.temperature ?? '--' }} ℃</p>
+                <div style="display: flex; gap: 15px; text-align: left;">
+                    <!-- 左列 -->
+                    <div style="flex: 2;">
+                        <p style="margin: 0 0 10px 0; padding-bottom: 8px; border-bottom: 1px dashed #e5e7eb;">质量流量: {{ meter2.massFlow ?? '--' }} t/h</p>
+                        <p style="margin: 0 0 10px 0; padding-bottom: 8px; border-bottom: 1px dashed #e5e7eb;">质量总量: {{ meter2.massTotal ?? '--' }} t</p>
+                        <p style="margin: 0 0 10px 0; padding-bottom: 8px; border-bottom: 1px dashed #e5e7eb;">体积流量: {{ meter2.volumeFlow ?? '--' }} m³/h</p>
+                        <p style="margin: 0;">体积总量: {{ meter2.volumeTotal ?? '--' }} m³</p>
+                    </div>
+                    <!-- 右列 -->
+                    <div style="flex: 1; border-left: 1px solid #e5e7eb; padding-left: 10px;">
+                        <p style="margin: 0 0 10px 0; padding-bottom: 8px; border-bottom: 1px dashed #e5e7eb;">密度: {{ meter2.density ?? '--' }}</p>
+                        <p style="margin: 0;">温度: {{ meter2.temperature ?? '--' }} ℃</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <!-- 折线图 -->
-    <div id="chart" style="width: 100%; height: 500px; margin-bottom: 20px;"></div>
-
-    <!-- 打开报表按钮 -->
-    <button @click="showReportDialog">查看报表</button>
-
-    <!-- 报表弹窗 -->
-    <dialog ref="reportDialog">
-        <h3>历史报表</h3>
-        <div class="controls">
-            流量计：
-            <select v-model="reportMeterId">
-                <option value="1">流量计1</option>
-                <option value="2">流量计2</option>
-            </select>
-            开始时间：
-            <input type="datetime-local" v-model="reportStart">
-            结束时间：
-            <input type="datetime-local" v-model="reportEnd">
-            <button @click="fetchReport">查询</button>
-            <button @click="printReport">打印</button>
-            <button @click="closeReportDialog">关闭</button>
+    <!-- 折线图区 -->
+    <div style="padding: 30px;background: linear-gradient(to right, #f9fafb, #f3f4f6);
+                border-radius: 12px;box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+                margin: 20px auto;max-width: 1600px;text-align: center;
+                border: 1px solid #e5e7eb;">
+        <!--标题-->
+        <h2 style="margin-bottom: 20px; font-size: 22px; color: #111827;
+                   padding-bottom: 10px; border-bottom: 2px solid #d1d5db;">流量计运行曲线</h2>
+        <!-- 图表容器 -->
+        <div id="chartFlow" style="width: 100%; height: 500px;" v-show="chartIndex===0"></div>
+        <div id="chartTotal" style="width: 100%; height: 500px;" v-show="chartIndex===1"></div>
+        <!-- 切换按钮 -->
+        <div style="text-align: center; margin-top: 15px; border-top: 1px dashed #d1d5db; padding-top: 10px;">
+            <button @click="prevChart"
+                    style="padding:6px 12px;border:1px solid #d1d5db;border-radius:6px;
+                           background:#fff;cursor:pointer;margin:0 5px;">
+                ◀ 上一图
+            </button>
+            <span style="margin: 0 15px; font-weight: bold;">{{ chartIndex===0 ? '流量曲线' : '总量曲线' }}</span>
+            <button @click="nextChart"
+                    style="padding:6px 12px;border:1px solid #d1d5db;border-radius:6px;
+                           background:#fff;cursor:pointer;margin:0 5px;">
+                下一图 ▶
+            </button>
         </div>
-        <table>
-            <thead>
-            <tr>
-                <th>时间</th>
-                <th>质量流量 t/h</th>
-                <th>质量总量 t</th>
-                <th>体积流量 m³/h</th>
-                <th>体积总量 m³</th>
-                <th>密度</th>
-                <th>温度</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr v-for="item in reportData" :key="item.id">
-                <td>{{ item.timestamp.replace('T',' ') }}</td>
-                <td>{{ item.massFlow }}</td>
-                <td>{{ item.massTotal }}</td>
-                <td>{{ item.volumeFlow }}</td>
-                <td>{{ item.volumeTotal }}</td>
-                <td>{{ item.density }}</td>
-                <td>{{ item.temperature }}</td>
-            </tr>
-            </tbody>
-        </table>
-    </dialog>
+    </div>
+
+    <!-- 报表区 -->
+    <div style="padding: 30px;background: linear-gradient(to right, #f9fafb, #f3f4f6);
+                border-radius: 12px;box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+                margin: 20px auto;max-width: 1600px; border: 1px solid #e5e7eb;">
+        <h2 style="margin-bottom: 20px; font-size: 22px; color: #111827;
+                   padding-bottom: 10px; border-bottom: 2px solid #d1d5db;">历史报表</h2>
+        <!-- 打开报表按钮 -->
+        <button @click="showReportDialog"
+                style="padding:8px 16px;border:1px solid #d1d5db;border-radius:6px;
+                       background:#fff;cursor:pointer;">
+            查看报表
+        </button>
+        <!-- 报表弹窗 -->
+        <dialog ref="reportDialog" style="padding:20px; border:1px solid #d1d5db; border-radius:10px;">
+            <h3 style="margin-bottom: 15px;">历史报表查询</h3>
+            <div style="margin-bottom:15px; border-bottom:1px dashed #d1d5db; padding-bottom:10px;">
+                流量计：
+                <select v-model="reportMeterId" style="margin-right:10px;">
+                    <option value="1">流量计1</option>
+                    <option value="2">流量计2</option>
+                </select>
+                开始时间：
+                <input type="datetime-local" v-model="reportStart" style="margin-right:10px;">
+                结束时间：
+                <input type="datetime-local" v-model="reportEnd" style="margin-right:10px;">
+                <button @click="fetchReport"
+                        style="padding:6px 12px;margin-right:5px;border:1px solid #d1d5db;border-radius:6px; background:#f9fafb;cursor:pointer;">查询</button>
+                <button @click="printReport"
+                        style="padding:6px 12px;margin-right:5px;border:1px solid #d1d5db;border-radius:6px; background:#f9fafb;cursor:pointer;">打印</button>
+                <button @click="closeReportDialog"
+                        style="padding:6px 12px;border:1px solid #d1d5db;border-radius:6px; background:#fef2f2;color:#dc2626;cursor:pointer;">关闭</button>
+            </div>
+            <table style="width:100%; border-collapse:collapse; text-align:center;">
+                <thead>
+                <tr style="background:#f3f4f6;">
+                    <th style="border:1px solid #e5e7eb; padding:8px;">时间</th>
+                    <th style="border:1px solid #e5e7eb; padding:8px;">质量流量 t/h</th>
+                    <th style="border:1px solid #e5e7eb; padding:8px;">质量总量 t</th>
+                    <th style="border:1px solid #e5e7eb; padding:8px;">体积流量 m³/h</th>
+                    <th style="border:1px solid #e5e7eb; padding:8px;">体积总量 m³</th>
+                    <th style="border:1px solid #e5e7eb; padding:8px;">密度</th>
+                    <th style="border:1px solid #e5e7eb; padding:8px;">温度</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="item in reportData" :key="item.id">
+                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.timestamp.replace('T',' ') }}</td>
+                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.massFlow }}</td>
+                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.massTotal }}</td>
+                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.volumeFlow }}</td>
+                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.volumeTotal }}</td>
+                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.density }}</td>
+                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.temperature }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </dialog>
+    </div>
+
 </div>
 
+
 <script>
-    const { createApp } = Vue;
+    const { createApp, ref, onMounted, onUnmounted, nextTick } = Vue;
 
     createApp({
-        data() {
-            return {
-                meter1: {},
-                meter2: {},
-                flowData1: [],
-                flowData2: [],
-                chart: null,
-                reportDialog: null,
-                reportMeterId: 1,
-                reportStart: '',
-                reportEnd: '',
-                reportData: []
-            }
-        },
-        mounted() {
-            this.chart = echarts.init(document.getElementById('chart'));
-            this.reportDialog = this.$refs.reportDialog;
+        setup() {
+            // 响应式数据
+            const meter1 = ref({});
+            const meter2 = ref({});
+            const flowData1 = ref([]);
+            const flowData2 = ref([]);
+            const chartFlow = ref(null);
+            const chartTotal = ref(null);
+            const chartIndex = ref(0); // 0=流速曲线, 1=总量曲线
+            const reportDialog = ref(null);
+            const reportMeterId = ref(1);
+            const reportStart = ref('');
+            const reportEnd = ref('');
+            const reportData = ref([]);
 
-            // 先渲染空图表，确保 dataZoom 正常初始化
-            this.chart.setOption({
-                title: { text: '流量计运行曲线' },
-                xAxis: { type: 'category', data: [] },
-                yAxis: { type: 'value' },
-                series: [],
-                dataZoom: [{ type: 'inside', start:0, end:100 }]
-            });
+            // 定时器引用
+            let dataInterval = null;
 
-            this.fetchCurrentData();
-            this.fetchRecentData();
+            // 初始化图表
+            const initCharts = () => {
+                chartFlow.value = echarts.init(document.getElementById('chartFlow'));
+                chartTotal.value = echarts.init(document.getElementById('chartTotal'));
 
-            setInterval(() => {
-                this.fetchCurrentData();
-                this.fetchRecentData();
-            }, 60000);
-        },
-        methods: {
-            async fetchCurrentData() {
-                const res1 = await axios.get('/api/flow/1/current');
-                const res2 = await axios.get('/api/flow/2/current');
-                this.meter1 = res1.data || {};
-                this.meter2 = res2.data || {};
-            },
-            async fetchRecentData() {
-                const res1 = await axios.get('/api/flow/1/recent?limit=100');
-                const res2 = await axios.get('/api/flow/2/recent?limit=100');
-                this.flowData1 = res1.data.reverse();
-                this.flowData2 = res2.data.reverse();
-
-                this.$nextTick(() => { // 确保 DOM 已渲染
-                    this.drawChart();
+                // 初始化空图
+                [chartFlow.value, chartTotal.value].forEach(chart => {
+                    chart.setOption({
+                        title: { text: '' },
+                        xAxis: { type: 'category', data: [] },
+                        yAxis: { type: 'value' },
+                        series: [],
+                        dataZoom: [{ type: 'inside', start: 0, end: 100 }]
+                    });
                 });
-            },
-            drawChart() {
-                const allData = [...this.flowData1, ...this.flowData2];
+            };
 
-                if(allData.length === 0) return; // 没有数据时直接返回
+            // 获取当前数据
+            const fetchCurrentData = async () => {
+                const [res1, res2] = await Promise.all([
+                    axios.get('/api/flow/1/current'),
+                    axios.get('/api/flow/2/current')
+                ]);
+                meter1.value = res1.data || {};
+                meter2.value = res2.data || {};
+            };
 
-                // 构建时间范围（从最早到最晚，按每分钟一个刻度）
-                let minTime = Math.min(...allData.map(d => new Date(d.timestamp).getTime()));
-                let maxTime = Math.max(...allData.map(d => new Date(d.timestamp).getTime()));
+            // 获取历史数据
+            const fetchRecentData = async () => {
+                const [res1, res2] = await Promise.all([
+                    axios.get('/api/flow/1/recent?limit=100'),
+                    axios.get('/api/flow/2/recent?limit=100')
+                ]);
+                flowData1.value = res1.data.reverse();
+                flowData2.value = res2.data.reverse();
+                nextTick(drawCharts);
+            };
 
+            // 绘制图表
+            const drawCharts = () => {
+                const allData = [...flowData1.value, ...flowData2.value];
+                if (allData.length === 0) return;
+
+                // 计算时间范围
+                const minTime = Math.min(...allData.map(d => new Date(d.timestamp).getTime()));
+                const maxTime = Math.max(...allData.map(d => new Date(d.timestamp).getTime()));
+
+                // 生成完整的时间序列（每分钟一个点）
                 const times = [];
-                const timeMap = {}; // 用于存储每分钟的对应数据
-                for(let t = minTime; t <= maxTime; t += 60*1000) { // 每分钟
+                const timeMap = {};
+                for (let t = minTime; t <= maxTime; t += 60000) {
                     const dt = new Date(t);
-                    const key = dt.getFullYear() + '-' +
-                        String(dt.getMonth()+1).padStart(2,'0') + '-' +
-                        String(dt.getDate()).padStart(2,'0') + ' ' +
-                        String(dt.getHours()).padStart(2,'0') + ':' +
-                        String(dt.getMinutes()).padStart(2,'0');
+                    const key = `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')}`;
                     times.push(key);
-                    timeMap[key] = { meter1:null, meter2:null };
+                    timeMap[key] = { meter1: null, meter2: null };
                 }
 
-                // 填充已有数据
+                // 将数据映射到时间序列上
                 allData.forEach(d => {
                     const dt = new Date(d.timestamp);
-                    dt.setSeconds(0); dt.setMilliseconds(0);
-                    const key = dt.getFullYear() + '-' +
-                        String(dt.getMonth()+1).padStart(2,'0') + '-' +
-                        String(dt.getDate()).padStart(2,'0') + ' ' +
-                        String(dt.getHours()).padStart(2,'0') + ':' +
-                        String(dt.getMinutes()).padStart(2,'0');
-                    if(timeMap[key]) {
-                        if(d.meterId===1) timeMap[key].meter1=d;
-                        if(d.meterId===2) timeMap[key].meter2=d;
+                    dt.setSeconds(0); dt.setMilliseconds(0); // 精确到分钟
+                    const key = `${dt.getFullYear()}-${String(dt.getMonth()+1).padStart(2,'0')}-${String(dt.getDate()).padStart(2,'0')} ${String(dt.getHours()).padStart(2,'0')}:${String(dt.getMinutes()).padStart(2,'0')}`;
+                    if (timeMap[key]) {
+                        timeMap[key][`meter${d.meterId}`] = d;
                     }
                 });
 
-                // 构建系列数据，缺失数据为 null
-                const meter1Mass = times.map(t => timeMap[t].meter1 ? timeMap[t].meter1.massFlow : null);
-                const meter1Volume = times.map(t => timeMap[t].meter1 ? timeMap[t].meter1.volumeFlow : null);
-                const meter2Mass = times.map(t => timeMap[t].meter2 ? timeMap[t].meter2.massFlow : null);
-                const meter2Volume = times.map(t => timeMap[t].meter2 ? timeMap[t].meter2.volumeFlow : null);
+                // 数据处理函数：根据仪表ID和字段名获取数据序列
+                const getData = (meter, field) => times.map(t => timeMap[t][`meter${meter}`]?.[field] ?? null);
 
-                this.chart.setOption({
-                    title: { text: '流量计运行曲线' },
+                // 图表配置函数
+                const createChartOption = (title, yName, seriesConfig) => ({
+                    title: { text: title },
                     tooltip: {
-                        trigger:'axis',
-                        formatter: (params) => {
-                            const time = params[0].axisValue;
-                            let tip = `<b>${time}</b><br/>`;
-                            params.forEach(p => {
-                                const dataObj = (p.seriesName.includes('流量计1') ? timeMap[time].meter1 : timeMap[time].meter2);
-                                if(dataObj) {
-                                    tip += `${p.seriesName}: ${p.data}<br/>` +
-                                        `质量总量: ${dataObj.massTotal}<br/>` +
-                                        `体积总量: ${dataObj.volumeTotal}<br/>` +
-                                        `密度: ${dataObj.density}<br/>` +
-                                        `温度: ${dataObj.temperature}<br/><br/>`;
-                                }
-                            });
-                            return tip;
-                        }
+                        trigger: 'axis',
+                        axisPointer: { type: 'cross' } // 十字准星指示器
                     },
-                    legend: { data:['流量计1质量流量','流量计1体积流量','流量计2质量流量','流量计2体积流量'] },
-                    xAxis:{
-                        type:'category',
+                    legend: {
+                        data: seriesConfig.map(s => s.name),
+                        // 默认显示质量流量/总量，隐藏体积流量/总量
+                        selected: Object.fromEntries(seriesConfig.map((s, i) => [s.name, i % 2 === 0]))
+                    },
+                    xAxis: {
+                        type: 'category',
                         data: times,
-                        boundaryGap:false,
-                        axisLabel:{
-                            rotate:45,
-                            interval:0,
-                            formatter:value => value.substr(11,5)
+                        boundaryGap: false,
+                        axisLabel: {
+                            interval: 'auto',   // 自动隐藏部分刻度
+                            hideOverlap: true,  // 避免重叠
+                            rotate: 45,         // 旋转倾斜显示
+                            formatter: v => v.substr(11, 5) // 只显示时分
                         }
                     },
-                    yAxis:{ type:'value', name:'流量' },
-                    dataZoom:[
-                        { type:'inside', start:95, end:100 }, // 默认只显示最后5%
-                        // { type:'slider', start:95, end:100 }  // 可视化缩放条
-                    ],
-                    series:[
-                        { name:'流量计1质量流量', type:'line', data:meter1Mass, connectNulls:false, smooth:true },
-                        { name:'流量计1体积流量', type:'line', data:meter1Volume, connectNulls:false, smooth:true },
-                        { name:'流量计2质量流量', type:'line', data:meter2Mass, connectNulls:false, smooth:true },
-                        { name:'流量计2体积流量', type:'line', data:meter2Volume, connectNulls:false, smooth:true }
-                    ]
+                    yAxis: { type: 'value', name: yName },
+                    dataZoom: [{ type: 'inside', start: 90, end: 100 }], // 默认显示最后10%
+                    series: seriesConfig.map((config, index) => ({
+                        name: config.name,
+                        type: 'line',
+                        data: getData(config.meter, config.field),
+                        smooth: true,          // 平滑曲线
+                        connectNulls: false,   // 不连接空数据点
+                        showSymbol: true,      // 显示拐点
+                        symbol: 'emptyDiamond',// 空心菱形拐点
+                        symbolSize: 1,         // 默认拐点大小
+                        emphasis: {            // 鼠标悬停高亮状态
+                            focus: 'series',   // 高亮整个系列
+                            showSymbol: true,  // 悬停时显示拐点
+                            symbolSize: 10,    // 悬停时拐点变大
+                            itemStyle: { borderWidth: 2 }, // 边框加粗
+                            lineStyle: { width: 3 },       // 线条加粗
+                            label: {
+                                show: true,
+                                position: 'top',
+                                formatter: params => {
+                                    const value = params.value ?? 'N/A'; // 处理空值
+                                    return `${value} ${config.unit}`;    // 显示数值和单位
+                                },
+                                backgroundColor: 'rgba(0,0,0,0.7)', // 背景色
+                                color: '#fff',     // 文字颜色
+                                padding: [4, 6]    // 内边距
+                            }
+                        }
+                    }))
                 });
-            }
 
+                // 流速曲线系列配置
+                const flowSeries = [
+                    { name: '流量计1质量流量', meter: 1, field: 'massFlow', unit: 't/h' },
+                    { name: '流量计1体积流量', meter: 1, field: 'volumeFlow', unit: 'm³/h' },
+                    { name: '流量计2质量流量', meter: 2, field: 'massFlow', unit: 't/h' },
+                    { name: '流量计2体积流量', meter: 2, field: 'volumeFlow', unit: 'm³/h' }
+                ];
 
-            ,
-            showReportDialog() { this.reportDialog.showModal(); },
-            closeReportDialog() { this.reportDialog.close(); },
-            async fetchReport() {
-                if(!this.reportStart||!this.reportEnd){ alert('请选择开始和结束时间'); return; }
-                const start = encodeURIComponent(this.reportStart);
-                const end = encodeURIComponent(this.reportEnd);
-                const meter = this.reportMeterId;
-                const res = await axios.get(`/api/flow/${meter}/range?start=${start}&end=${end}`);
-                this.reportData = res.data;
-            },
-            printReport() {
-                const printContent = this.reportDialog.innerHTML;
+                // 总量曲线系列配置
+                const totalSeries = [
+                    { name: '流量计1质量总量', meter: 1, field: 'massTotal', unit: 't' },
+                    { name: '流量计1体积总量', meter: 1, field: 'volumeTotal', unit: 'm³' },
+                    { name: '流量计2质量总量', meter: 2, field: 'massTotal', unit: 't' },
+                    { name: '流量计2体积总量', meter: 2, field: 'volumeTotal', unit: 'm³' }
+                ];
+
+                // 设置图表选项
+                chartFlow.value?.setOption(createChartOption('流量曲线', '流量', flowSeries));
+                chartTotal.value?.setOption(createChartOption('总量曲线', '总量', totalSeries));
+            };
+
+            // 图表切换
+            const prevChart = () => {
+                chartIndex.value = chartIndex.value === 0 ? 1 : chartIndex.value - 1;
+            };
+
+            const nextChart = () => {
+                chartIndex.value = chartIndex.value === 1 ? 0 : chartIndex.value + 1;
+            };
+
+            // 报表功能
+            const showReportDialog = () => {
+                if (reportDialog.value) reportDialog.value.showModal();
+            };
+
+            const closeReportDialog = () => {
+                if (reportDialog.value) reportDialog.value.close();
+            };
+
+            const fetchReport = async () => {
+                if (!reportStart.value || !reportEnd.value) {
+                    alert('请选择开始和结束时间');
+                    return;
+                }
+                const start = encodeURIComponent(reportStart.value);
+                const end = encodeURIComponent(reportEnd.value);
+                const res = await axios.get(`/api/flow/${reportMeterId.value}/range?start=${start}&end=${end}`);
+                reportData.value = res.data;
+            };
+
+            const printReport = () => {
+                if (!reportDialog.value) return;
+                const printContent = reportDialog.value.innerHTML;
                 const w = window.open('', '', 'width=900,height=600');
-                w.document.write('<html><head><title>流量计报表</title></head><body>'+printContent+'</body></html>');
+                w.document.write('<html><head><title>流量计报表</title></head><body>' + printContent + '</body></html>');
                 w.document.close();
                 w.print();
-            }
+            };
+
+            // 窗口调整监听
+            const handleResize = () => {
+                if (chartFlow.value) chartFlow.value.resize();
+                if (chartTotal.value) chartTotal.value.resize();
+            };
+
+            // 监听图表索引变化
+            Vue.watch(chartIndex, (newVal) => {
+                nextTick(() => {
+                    if (newVal === 0 && chartFlow.value) {
+                        chartFlow.value.resize();
+                    } else if (newVal === 1 && chartTotal.value) {
+                        chartTotal.value.resize();
+                    }
+                });
+            });
+
+            // 生命周期
+            onMounted(() => {
+                initCharts();
+                fetchCurrentData();
+                fetchRecentData();
+
+                // 设置定时器，每分钟更新数据
+                dataInterval = setInterval(() => {
+                    fetchCurrentData();
+                    fetchRecentData();
+                }, 60000);
+
+                // 监听窗口大小变化，自动调整图表
+                window.addEventListener('resize', handleResize);
+            });
+
+            onUnmounted(() => {
+                // 清理定时器
+                if (dataInterval) {
+                    clearInterval(dataInterval);
+                }
+                // 移除事件监听
+                window.removeEventListener('resize', handleResize);
+                // 销毁图表实例
+                if (chartFlow.value) chartFlow.value.dispose();
+                if (chartTotal.value) chartTotal.value.dispose();
+            });
+
+            // 暴露给模板
+            return {
+                meter1,
+                meter2,
+                flowData1,
+                flowData2,
+                chartIndex,
+                reportDialog,
+                reportMeterId,
+                reportStart,
+                reportEnd,
+                reportData,
+                prevChart,
+                nextChart,
+                showReportDialog,
+                closeReportDialog,
+                fetchReport,
+                printReport
+            };
         }
     }).mount('#app');
 </script>
+
 </body>
 </html>

@@ -42,7 +42,7 @@ public class FlowMeterService {
         }
     }
 
-    @Scheduled(fixedRate = 60_000)
+    // @Scheduled(fixedRate = 60_000)
     public void collectData() {
         initSerialPort();
         if (serialPort == null) {

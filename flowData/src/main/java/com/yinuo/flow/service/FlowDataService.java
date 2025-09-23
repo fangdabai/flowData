@@ -30,7 +30,7 @@ public class FlowDataService {
     private FlowMeterService flowMeterService; // 注入 FlowMeterService
 
     // 每分钟采集一次（2个流量计）-- 模拟数据
-    // @Scheduled(fixedRate = 60_000)
+    @Scheduled(fixedRate = 60_000)
     public void collectData() {
         for (int meterId = 1; meterId <= 2; meterId++) {
             FlowData data = new FlowData();
