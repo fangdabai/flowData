@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>height:100% 对照 Demo</title>
+<style>
+  body {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+  }
+  .box {
+    flex: 1;
+    border: 2px solid black;
+  }
+  .inner {
+    height: 100%;
+    background: lightcoral;
+  }
+
+  /* 右侧容器：让 html, body 有高度基准 */
+  .with html, 
+  .with body {
+    height: 100%;
+  }
+</style>
+</head>
+<body>
+
+<!-- 左边：没设置 html,body 高度 -->
+<iframe class="box" srcdoc="
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { margin:0; }
+  .inner { height:100%; background:lightblue; }
+</style>
+</head>
+<body>
+  <div class='inner'>没有生效（只包内容）</div>
+</body>
+</html>
+"></iframe>
+
+<!-- 右边：设置了 html,body 高度 -->
+<iframe class="box" srcdoc="
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html, body { height:100%; margin:0; }
+  .inner { height:100%; background:lightgreen; }
+</style>
+</head>
+<body>
+  <div class='inner'>生效（填满一屏）</div>
+</body>
+</html>
+"></iframe>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* 删除除 `display` 属性之外的客户端所有默认样式；symbol * 是为了解决 Firefox 浏览器中 SVG 雪碧图的 Bug */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* box-sizing 的首选值*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 删除列表项默认标记符样式 */
+ol, ul {
+    list-style: none;
+}
+
+/* 让图片不超出容器宽度 */
+img {
+    max-width: 100%;
+}
+
+/* 删除表格单元格之间的间距 */
+table {
+    border-collapse: collapse;
+}
+
+/* 使用 revert 恢复 Safari 浏览器 textarea 元素的 white-space 属性值 */
+textarea {
+    white-space: revert;
+}

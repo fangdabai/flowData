@@ -3,6 +3,7 @@ package com.yinuo.flow.controller;
 import com.yinuo.flow.entity.FlowData;
 import com.yinuo.flow.mapper.FlowDataMapper;
 import com.yinuo.flow.service.FlowDataService;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -52,6 +53,17 @@ public class FlowDataController {
         LocalDateTime endTime = LocalDateTime.parse(end);
         return service.getRangeData(meterId, startTime, endTime);
     }
+
+    // 4. 根据时间范围查询 质量总量差值和体积总量差值
+    @GetMapping("/summary")
+    public Map<String, Object> getSummary(
+            @RequestParam int meterId,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime startTime,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime endTime) {
+
+        return service.getSummary(meterId, startTime, endTime);
+    }
+
 
 
 

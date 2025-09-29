@@ -9,9 +9,9 @@
     <script src="./js/lib/vue@3.4.21.js"></script>
     <script src="./js/lib/axios.min.js"></script>
     <script src="./js/lib/echarts.min.js"></script>
+    <script src="./js/lib/xlsx.full.min.js"></script>
     <style>
 
-        /* 全局清除默认 margin/padding */
         * {
             margin: 0;
             padding: 0;
@@ -20,63 +20,272 @@
 
         body {
             font-family: sans-serif;
+            background: #f5f5f5;
+        }
+
+
+        /* 背景虚化效果 */
+        .dialog-open #app > *:not(dialog):not(.dialog-overlay) {
+            filter: blur(8px);
+            transition: filter 0.4s ease;
+        }
+
+        /* 遮罩层 */
+        .dialog-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            /*background-color: aqua;*/
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            z-index: 998;
         }
 
-        /* Vue 挂载点占满宽度和高度 */
-        #app {
-            width: 100%;
-            min-height: 100vh; /* 高度撑满屏幕 */
-            /*background-color: aqua;*/
+        /* 确保弹窗在遮罩层之上 */
+        dialog {
+            z-index: 999;
         }
-
-        .meter-status { display: flex; justify-content: space-around; margin-bottom: 20px; }
-        .meter-box { padding: 10px; border: 1px solid #ccc; border-radius: 6px; width: 45%; background-color: #f7f7f7; }
-        .meter-box h3 { margin: 0 0 10px 0; font-size: 16px; }
-        .meter-box p { margin: 4px 0; }
-
-        dialog { width: 80%; max-width: 800px; border: none; border-radius: 6px; padding: 20px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        table, th, td { border: 1px solid #aaa; }
-        th, td { padding: 6px; text-align: center; }
-        .controls { margin-bottom: 10px; }
-        button { margin-right: 6px; }
     </style>
 </head>
 <body>
 
-<div id="app">
+<div id="app" :class="{ 'dialog-open': isDialogOpen }">
 
     <!--流量计实时监控区-->
-    <div style="padding: 30px;background: linear-gradient(to right, #f9fafb, #f3f4f6);
-                border-radius: 12px;box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-                margin: 20px auto;max-width: 1600px; border: 1px solid #e5e7eb;">
-        <!--标题-->
-        <h2 style="text-align: center; margin-bottom: 25px; font-size: 24px; color: #111827;
-                   padding-bottom: 10px; border-bottom: 2px solid #d1d5db;">流量计实时监控</h2>
+    <div style="background: linear-gradient(to right, #f9fafb, #f3f4f6);
+                border-radius: 12px;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+                border: 1px solid #e5e7eb;
+                margin: 5px 10px; ">
 
+        <!--固定在容器的查询报表与全屏按钮-->
+        <div style="position: absolute;
+            top: 10px;
+            right: 30px;
+            display: flex;
+            gap: 8px;">
+            <button @click="showHistoryDataDialog"
+                    style="padding: 8px 16px;
+                   border: 1px solid #d1d5db;
+                   border-radius: 6px;
+                   background: #fff;
+                   color: #374151;
+                   font-size: 14px;
+                   font-weight: 500;
+                   cursor: pointer;
+                   transition: all 0.2s ease;">
+                📋 历史数据
+            </button>
+            <!-- 历史数据弹窗 -->
+            <dialog ref="historyDataDialog" style="margin: auto; padding:20px; border:1px solid #d1d5db; border-radius:10px; max-width: 100vw; max-height: 100vh;min-width: 95vw; min-height: 90vh;">
+                <div style="margin-bottom: 30px; font-size: 24px; font-weight: bold; text-align: center;">📋 历史数据查询</div>
+                <div style="margin-bottom:15px; border-bottom:1px dashed #d1d5db; padding-bottom:15px;">
+                    <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                        <!-- 表单控件组 -->
+                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                            <span style="font-size: 16px; font-weight: 500;">流量计：</span>
+                            <select v-model="historyDataMeterId" style="padding:8px 12px; font-size: 15px; border-radius:6px; border:1px solid #d1d5db; min-width: 120px;">
+                                <option value="1">流量计1</option>
+                                <option value="2">流量计2</option>
+                            </select>
+
+                            <span style="font-size: 18px; font-weight: 600;">开始时间：</span>
+                            <input type="datetime-local" v-model="historyDataStart" style="padding:8px 12px; font-size: 15px; border-radius:6px; border:1px solid #d1d5db; min-width: 200px;">
+
+                            <span style="font-size: 18px; font-weight: 600;">结束时间：</span>
+                            <input type="datetime-local" v-model="historyDataEnd" style="padding:8px 12px; font-size: 15px; border-radius:6px; border:1px solid #d1d5db; min-width: 200px;">
+                        </div>
+
+                        <!-- 操作按钮组 -->
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <button @click="fetchHistoryData"
+                                    style="padding:10px 16px;border:1px solid #3b82f6;border-radius:6px; background:#dbeafe;color:#1d4ed8;cursor:pointer; font-size: 15px; font-weight: 500; white-space: nowrap;">
+                                🔍 查询</button>
+                            <button @click="historyDataExportToExcel"
+                                    style="padding:10px 16px;border:1px solid #10b981;border-radius:6px; background:#ecfdf5;color:#047857;cursor:pointer; font-size: 15px; font-weight: 500; white-space: nowrap;">
+                                📋 导出Excel</button>
+                            <button @click="closeHistoryDataDialog"
+                                    style="padding:10px 16px;border:1px solid #ef4444;border-radius:6px; background:#fef2f2;color:#dc2626;cursor:pointer; font-size: 15px; font-weight: 500; white-space: nowrap;">
+                                ❌ 关闭</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 表格容器，添加滚动 -->
+                <div style="max-height: 600px; overflow: auto; position: relative;">
+                    <table style="width:100%; border-collapse:collapse; text-align:center; font-size: 18px;">
+                        <thead style="position: sticky; top: 0; background: #f3f4f6; z-index: 10;">
+                        <tr>
+                            <th style="border:1px solid #e5e7eb; padding:10px; font-size: 18px;">时间</th>
+                            <th style="border:1px solid #e5e7eb; padding:10px; font-size: 18px;">质量流量 t/h</th>
+                            <th style="border:1px solid #e5e7eb; padding:10px; font-size: 18px;">质量总量 t</th>
+                            <th style="border:1px solid #e5e7eb; padding:10px; font-size: 18px;">体积流量 m³/h</th>
+                            <th style="border:1px solid #e5e7eb; padding:10px; font-size: 18px;">体积总量 m³</th>
+                            <th style="border:1px solid #e5e7eb; padding:10px; font-size: 18px;">密度</th>
+                            <th style="border:1px solid #e5e7eb; padding:10px; font-size: 18px;">温度</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="item in historyDataData" :key="item.id">
+                            <td style="border:1px solid #e5e7eb; padding:8px;">{{ item.timestamp.replace('T',' ') }}</td>
+                            <td style="border:1px solid #e5e7eb; padding:8px;">{{ item.massFlow }}</td>
+                            <td style="border:1px solid #e5e7eb; padding:8px;">{{ item.massTotal }}</td>
+                            <td style="border:1px solid #e5e7eb; padding:8px;">{{ item.volumeFlow }}</td>
+                            <td style="border:1px solid #e5e7eb; padding:8px;">{{ item.volumeTotal }}</td>
+                            <td style="border:1px solid #e5e7eb; padding:8px;">{{ item.density }}</td>
+                            <td style="border:1px solid #e5e7eb; padding:8px;">{{ item.temperature }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </dialog>
+
+
+            <!-- 报表统计按钮 -->
+            <button @click="showReportDialog"
+                    style="padding: 8px 16px;
+               border: 1px solid #d1d5db;
+               border-radius: 6px;
+               background: #fff;
+               color: #374151;
+               font-size: 14px;
+               font-weight: 500;
+               cursor: pointer;
+               transition: all 0.2s ease;">
+                📊 报表统计
+            </button>
+
+            <!-- 报表统计弹窗 -->
+            <!-- 📊 报表统计弹窗 -->
+            <dialog ref="reportSummaryDialog"
+                    style="margin: auto; padding:20px; border:1px solid #d1d5db; border-radius:10px;
+           max-width: 100vw; max-height: 100vh; min-width: 95vw; min-height: 90vh;">
+                <div style="margin-bottom: 30px; font-size: 24px; font-weight: bold; text-align: center;">
+                    📊 报表统计查询
+                </div>
+
+                <!-- 查询条件 -->
+                <div style="margin-bottom:15px; border-bottom:1px dashed #d1d5db; padding-bottom:15px;">
+                    <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                            <span style="font-size: 16px; font-weight: 500;">流量计选择：</span>
+                            <select v-model="summaryMeterId"
+                                    style="padding:8px 12px; font-size: 15px; border-radius:6px; border:1px solid #d1d5db; min-width: 120px;">
+                                <option value="1">流量计1</option>
+                                <option value="2">流量计2</option>
+                            </select>
+
+                            <span style="font-size: 18px; font-weight: 600;">起始时间：</span>
+                            <input type="datetime-local" v-model="summaryStart"
+                                   style="padding:8px 12px; font-size: 15px; border-radius:6px; border:1px solid #d1d5db; min-width: 200px;">
+
+                            <span style="font-size: 18px; font-weight: 600;">结束时间：</span>
+                            <input type="datetime-local" v-model="summaryEnd"
+                                   style="padding:8px 12px; font-size: 15px; border-radius:6px; border:1px solid #d1d5db; min-width: 200px;">
+                        </div>
+
+                        <!-- 操作按钮 -->
+                        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                            <button @click="fetchSummary"
+                                    style="padding:10px 16px;border:1px solid #3b82f6;border-radius:6px; background:#dbeafe;color:#1d4ed8;cursor:pointer; font-size: 15px; font-weight: 500;">
+                                🔍 查询</button>
+                            <button @click="reportExportToExcel"
+                                    style="padding:10px 16px;border:1px solid #10b981;border-radius:6px; background:#ecfdf5;color:#047857;cursor:pointer; font-size: 15px; font-weight: 500; white-space: nowrap;">
+                                📋 导出Excel</button>
+                            <button @click="closeReportDialog"
+                                    style="padding:10px 16px;border:1px solid #ef4444;border-radius:6px; background:#fef2f2;color:#dc2626;cursor:pointer; font-size: 15px; font-weight: 500;">
+                                ❌ 关闭</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 统计结果 -->
+                <div v-if="summaryData" style="margin-top: 20px;">
+
+                    <!-- 1️⃣ 显示首尾两条记录 -->
+                    <div style="margin-bottom: 20px;">
+                        <h3 style="font-size:20px;font-weight:600;margin-bottom:10px;">📅 时间段内首尾数据</h3>
+                        <p style="margin-bottom:10px;color:#6b7280;">以下为系统在所选时间段内找到的首条与末条记录：</p>
+                        <table style="width:100%; border-collapse:collapse; text-align:center; font-size: 18px;">
+                            <thead style="background:#f3f4f6;">
+                            <tr>
+                                <th style="border:1px solid #e5e7eb; padding:10px;">类型</th>
+                                <th style="border:1px solid #e5e7eb; padding:10px;">采集时间</th>
+                                <th style="border:1px solid #e5e7eb; padding:10px;">累计质量 (t)</th>
+                                <th style="border:1px solid #e5e7eb; padding:10px;">累计体积 (m³)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr v-if="summaryData.startRecord">
+                                <td style="border:1px solid #e5e7eb; padding:10px;">开始记录</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">{{ summaryData.startRecord.timestamp.replace('T',' ') }}</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">{{ summaryData.startRecord.massTotal }}</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">{{ summaryData.startRecord.volumeTotal }}</td>
+                            </tr>
+                            <tr v-if="summaryData.endRecord">
+                                <td style="border:1px solid #e5e7eb; padding:10px;">结束记录</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">{{ summaryData.endRecord.timestamp.replace('T',' ') }}</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">{{ summaryData.endRecord.massTotal }}</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">{{ summaryData.endRecord.volumeTotal }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 2️⃣ 差值统计 -->
+                    <div>
+                        <h3 style="font-size:20px;font-weight:600;margin-bottom:10px;">📊 统计结果</h3>
+                        <p style="margin-bottom:10px;color:#6b7280;">根据首尾数据计算得出以下统计结果：</p>
+                        <table style="width:100%; border-collapse:collapse; text-align:center; font-size: 18px;">
+                            <thead style="background:#f3f4f6;">
+                            <tr>
+                                <th style="border:1px solid #e5e7eb; padding:10px;">项目</th>
+                                <th style="border:1px solid #e5e7eb; padding:10px;">起止时间</th>
+                                <th style="border:1px solid #e5e7eb; padding:10px;">统计值</th>
+                                <th style="border:1px solid #e5e7eb; padding:10px;">单位</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">累计质量总量</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">{{summaryStart.replace('T',' ')}} - {{summaryEnd.replace('T',' ')}}</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">{{ summaryData.massTotalDiff }}</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">t</td>
+                            </tr>
+                            <tr>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">累计体积总量</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">{{summaryStart.replace('T',' ')}} - {{summaryEnd.replace('T',' ')}}</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">{{ summaryData.volumeTotalDiff }}</td>
+                                <td style="border:1px solid #e5e7eb; padding:10px;">m³</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </dialog>
+
+
+        </div>
+
+        <!--标题-->
+        <div style="font-size: 24px; font-weight: bold; text-align: center;">流量计实时监控</div>
+        <hr style="height: 2px; margin: 10px 0; border: none; background-color: #d1d5db;">
         <!-- 实时数据 -->
-        <div style="display: flex; gap: 40px; justify-content: center; margin-top: 20px;
-                    width: 100%; max-width: 1300px; margin-left: auto; margin-right: auto;
-                    border-top: 1px dashed #d1d5db; padding-top: 20px;">
+        <div style="display: flex; justify-content: center">
             <!-- 流量计1 -->
             <div :style="{
                  flex: 1,
-                 padding: '15px',
-                 borderRadius: '10px',
-                 boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+                 margin: '0 10px 10px 10px', padding: '10px',
+                 borderRadius: '10px', boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
                  backgroundColor: meter1.online ? '#f0fff4' : '#fff5f5',
                  position: 'relative',
                  border: '1px solid #e5e7eb'
              }">
-                <h3 style="margin-bottom: 15px; font-size: 18px; color: #333;
-                           padding-right: 100px; text-align: left;
-                           border-bottom: 1px solid #e5e7eb; padding-bottom: 8px;">流量计 1</h3>
+                <div style="font-size: 20px; font-weight: bold;">流量计 1</div>
                 <div :style="{
                     position: 'absolute',
-                    top: '15px',
+                    top: '10px',
                     right: '15px',
                     fontWeight: 'bold',
                     padding: '3px 8px',
@@ -87,6 +296,8 @@
                 }">
                     {{ meter1.online ? '通讯正常' : '通讯失败' }}
                 </div>
+
+                <hr style="height: 2px; margin: 10px 0; border: none; background-color: #d1d5db;">
 
                 <div style="display: flex; gap: 15px; text-align: left;">
                     <!-- 左列 -->
@@ -107,19 +318,17 @@
             <!-- 流量计2 -->
             <div :style="{
                  flex: 1,
-                 padding: '15px',
+                 margin: '0 10px 10px 10px', padding: '10px',
                  borderRadius: '10px',
                  boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
                  backgroundColor: meter2.online ? '#f0fff4' : '#fff5f5',
                  position: 'relative',
                  border: '1px solid #e5e7eb'
              }">
-                <h3 style="margin-bottom: 15px; font-size: 18px; color: #333;
-                           padding-right: 100px; text-align: left;
-                           border-bottom: 1px solid #e5e7eb; padding-bottom: 8px;">流量计 2</h3>
+                <div style="font-size: 20px; font-weight: bold;">流量计 2</div>
                 <div :style="{
                     position: 'absolute',
-                    top: '15px',
+                    top: '10px',
                     right: '15px',
                     fontWeight: 'bold',
                     padding: '3px 8px',
@@ -130,6 +339,8 @@
                 }">
                     {{ meter2.online ? '通讯正常' : '通讯失败' }}
                 </div>
+
+                <hr style="height: 2px; margin: 10px 0; border: none; background-color: #d1d5db;">
 
                 <div style="display: flex; gap: 15px; text-align: left;">
                     <!-- 左列 -->
@@ -150,18 +361,19 @@
     </div>
 
     <!-- 折线图区 -->
-    <div style="padding: 30px;background: linear-gradient(to right, #f9fafb, #f3f4f6);
-                border-radius: 12px;box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-                margin: 20px auto;max-width: 1600px;text-align: center;
-                border: 1px solid #e5e7eb;">
+    <div style="background: linear-gradient(to right, #f9fafb, #f3f4f6);
+                border-radius: 12px;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+                border: 1px solid #e5e7eb;
+                margin: 5px 10px; ">
         <!--标题-->
-        <h2 style="margin-bottom: 20px; font-size: 22px; color: #111827;
-                   padding-bottom: 10px; border-bottom: 2px solid #d1d5db;">流量计运行曲线</h2>
+        <div style="font-size: 24px; font-weight: bold; text-align: center;">流量计运行曲线</div>
+        <hr style="height: 2px; margin: 10px 0; border: none; background-color: #d1d5db;">
         <!-- 图表容器 -->
-        <div id="chartFlow" style="width: 100%; height: 500px;" v-show="chartIndex===0"></div>
-        <div id="chartTotal" style="width: 100%; height: 500px;" v-show="chartIndex===1"></div>
+        <div id="chartFlow" style="width: 100%; height: 440px;" v-show="chartIndex===0"></div>
+        <div id="chartTotal" style="width: 100%; height: 440px;" v-show="chartIndex===1"></div>
         <!-- 切换按钮 -->
-        <div style="text-align: center; margin-top: 15px; border-top: 1px dashed #d1d5db; padding-top: 10px;">
+        <div style="text-align: center; margin-top: 15px; margin-bottom: 5px;border-top: 1px dashed #d1d5db; padding-top: 10px;">
             <button @click="prevChart"
                     style="padding:6px 12px;border:1px solid #d1d5db;border-radius:6px;
                            background:#fff;cursor:pointer;margin:0 5px;">
@@ -176,64 +388,9 @@
         </div>
     </div>
 
-    <!-- 报表区 -->
-    <div style="padding: 30px;background: linear-gradient(to right, #f9fafb, #f3f4f6);
-                border-radius: 12px;box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-                margin: 20px auto;max-width: 1600px; border: 1px solid #e5e7eb;">
-        <h2 style="margin-bottom: 20px; font-size: 22px; color: #111827;
-                   padding-bottom: 10px; border-bottom: 2px solid #d1d5db;">历史报表</h2>
-        <!-- 打开报表按钮 -->
-        <button @click="showReportDialog"
-                style="padding:8px 16px;border:1px solid #d1d5db;border-radius:6px;
-                       background:#fff;cursor:pointer;">
-            查看报表
-        </button>
-        <!-- 报表弹窗 -->
-        <dialog ref="reportDialog" style="padding:20px; border:1px solid #d1d5db; border-radius:10px;">
-            <h3 style="margin-bottom: 15px;">历史报表查询</h3>
-            <div style="margin-bottom:15px; border-bottom:1px dashed #d1d5db; padding-bottom:10px;">
-                流量计：
-                <select v-model="reportMeterId" style="margin-right:10px;">
-                    <option value="1">流量计1</option>
-                    <option value="2">流量计2</option>
-                </select>
-                开始时间：
-                <input type="datetime-local" v-model="reportStart" style="margin-right:10px;">
-                结束时间：
-                <input type="datetime-local" v-model="reportEnd" style="margin-right:10px;">
-                <button @click="fetchReport"
-                        style="padding:6px 12px;margin-right:5px;border:1px solid #d1d5db;border-radius:6px; background:#f9fafb;cursor:pointer;">查询</button>
-                <button @click="printReport"
-                        style="padding:6px 12px;margin-right:5px;border:1px solid #d1d5db;border-radius:6px; background:#f9fafb;cursor:pointer;">打印</button>
-                <button @click="closeReportDialog"
-                        style="padding:6px 12px;border:1px solid #d1d5db;border-radius:6px; background:#fef2f2;color:#dc2626;cursor:pointer;">关闭</button>
-            </div>
-            <table style="width:100%; border-collapse:collapse; text-align:center;">
-                <thead>
-                <tr style="background:#f3f4f6;">
-                    <th style="border:1px solid #e5e7eb; padding:8px;">时间</th>
-                    <th style="border:1px solid #e5e7eb; padding:8px;">质量流量 t/h</th>
-                    <th style="border:1px solid #e5e7eb; padding:8px;">质量总量 t</th>
-                    <th style="border:1px solid #e5e7eb; padding:8px;">体积流量 m³/h</th>
-                    <th style="border:1px solid #e5e7eb; padding:8px;">体积总量 m³</th>
-                    <th style="border:1px solid #e5e7eb; padding:8px;">密度</th>
-                    <th style="border:1px solid #e5e7eb; padding:8px;">温度</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="item in reportData" :key="item.id">
-                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.timestamp.replace('T',' ') }}</td>
-                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.massFlow }}</td>
-                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.massTotal }}</td>
-                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.volumeFlow }}</td>
-                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.volumeTotal }}</td>
-                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.density }}</td>
-                    <td style="border:1px solid #e5e7eb; padding:6px;">{{ item.temperature }}</td>
-                </tr>
-                </tbody>
-            </table>
-        </dialog>
-    </div>
+
+    <!-- 遮罩层 -->
+    <div v-if="isDialogOpen" class="dialog-overlay"></div>
 
 </div>
 
@@ -251,11 +408,13 @@
             const chartFlow = ref(null);
             const chartTotal = ref(null);
             const chartIndex = ref(0); // 0=流速曲线, 1=总量曲线
-            const reportDialog = ref(null);
-            const reportMeterId = ref(1);
-            const reportStart = ref('');
-            const reportEnd = ref('');
-            const reportData = ref([]);
+            const historyDataDialog = ref(null);
+            const historyDataMeterId = ref(1);
+            // 设置时间默认为今天0。0到23.59
+            const historyDataStart = ref(new Date().toISOString().slice(0, 10) + 'T00:00');
+            const historyDataEnd = ref(new Date().toISOString().slice(0, 10) + 'T23:59');
+            const historyDataData = ref([]);
+            const isDialogOpen = ref(false);        // 弹窗是否打开来设置遮罩
 
             // 定时器引用
             let dataInterval = null;
@@ -332,29 +491,64 @@
 
                 // 图表配置函数
                 const createChartOption = (title, yName, seriesConfig) => ({
-                    title: { text: title },
+                    title: { text: title ,
+                        left: 'center',
+                        textStyle: {
+                            fontSize: 20, // 标题字体大小
+                            fontWeight: 'bold'
+                        }
+                    },
+                    grid: {
+                        left: '100',
+                        right: '100',
+                    },
                     tooltip: {
                         trigger: 'axis',
                         axisPointer: { type: 'cross' } // 十字准星指示器
                     },
+                    // 图例 (legend)，
                     legend: {
+                        top: 'bottom',          // 放在底部
+                        orient: 'horizontal',   // 图例布局方向：
+                        padding: [5, 10],       // 内边距：支持数组或单个数值
+                        itemGap: 30,            // 图例项之间的间距（水平或垂直间距）
+                        itemWidth: 30,          // 可选：图例小方块宽度
+                        itemHeight: 15,         // 可选：图例小方块高度
+                        // icon: 'circle',         // 图标类型：
+
+                        textStyle: {
+                            fontSize: 18,       // 图例标签字体大小
+                            color: '#333'       // 可选：文字颜色
+                        },
+
                         data: seriesConfig.map(s => s.name),
                         // 默认显示质量流量/总量，隐藏体积流量/总量
                         selected: Object.fromEntries(seriesConfig.map((s, i) => [s.name, i % 2 === 0]))
                     },
                     xAxis: {
                         type: 'category',
+                        name: '时间',
+                        nameTextStyle: {
+                            fontSize: 14 // x轴名称字体
+                        },
                         data: times,
                         boundaryGap: false,
                         axisLabel: {
+                            fontSize: 12, // x轴刻度字体
                             interval: 'auto',   // 自动隐藏部分刻度
                             hideOverlap: true,  // 避免重叠
                             rotate: 45,         // 旋转倾斜显示
                             formatter: v => v.substr(11, 5) // 只显示时分
                         }
                     },
-                    yAxis: { type: 'value', name: yName },
-                    dataZoom: [{ type: 'inside', start: 90, end: 100 }], // 默认显示最后10%
+                    yAxis: {
+                        type: 'value',
+                        name: yName,
+                        nameTextStyle: {
+                            fontSize: 14 // x轴名称字体
+                        },
+                    },
+                    dataZoom: [{ type: 'inside', start: 80, end: 100 }], // 默认显示最后10%
                     series: seriesConfig.map((config, index) => ({
                         name: config.name,
                         type: 'line',
@@ -415,40 +609,211 @@
                 chartIndex.value = chartIndex.value === 1 ? 0 : chartIndex.value + 1;
             };
 
-            // 报表功能
-            const showReportDialog = () => {
-                if (reportDialog.value) reportDialog.value.showModal();
+            // 历史数据------------------------------------------------------------------------------------------------------------------------------------------------.
+            const showHistoryDataDialog = () => {
+                isDialogOpen.value = true;
+                // 添加延迟确保CSS过渡生效
+                setTimeout(() => {
+                    if (historyDataDialog.value) historyDataDialog.value.showModal();
+                }, 50);
             };
 
-            const closeReportDialog = () => {
-                if (reportDialog.value) reportDialog.value.close();
+            const closeHistoryDataDialog = () => {
+                isDialogOpen.value = false;
+                if (historyDataDialog.value) historyDataDialog.value.close();
             };
 
-            const fetchReport = async () => {
-                if (!reportStart.value || !reportEnd.value) {
+            const fetchHistoryData = async () => {
+                if (!historyDataStart.value || !historyDataEnd.value) {
                     alert('请选择开始和结束时间');
                     return;
                 }
-                const start = encodeURIComponent(reportStart.value);
-                const end = encodeURIComponent(reportEnd.value);
-                const res = await axios.get(`/api/flow/${reportMeterId.value}/range?start=${start}&end=${end}`);
-                reportData.value = res.data;
+                const start = encodeURIComponent(historyDataStart.value);
+                const end = encodeURIComponent(historyDataEnd.value);
+                const res = await axios.get(`/api/flow/${historyDataMeterId.value}/range?start=${start}&end=${end}`);
+                historyDataData.value = res.data;
             };
 
-            const printReport = () => {
-                if (!reportDialog.value) return;
-                const printContent = reportDialog.value.innerHTML;
-                const w = window.open('', '', 'width=900,height=600');
-                w.document.write('<html><head><title>流量计报表</title></head><body>' + printContent + '</body></html>');
-                w.document.close();
-                w.print();
+
+
+
+            const reportSummaryDialog = ref(null);
+            const summaryMeterId = ref(1);
+            // 设置时间默认为今天0。0到23.59
+            const summaryStart = ref(new Date().toISOString().slice(0, 10) + 'T00:00');
+            const summaryEnd = ref(new Date().toISOString().slice(0, 10) + 'T23:59');
+            const summaryData = ref(null);
+
+
+            const showReportDialog = () => {
+                isDialogOpen.value = true;
+                // 添加延迟确保CSS过渡生效
+                setTimeout(() => {
+                    if (reportSummaryDialog.value) reportSummaryDialog.value.showModal();
+                }, 50);
             };
+
+            const closeReportDialog = () => {
+                isDialogOpen.value = false;
+                if (reportSummaryDialog.value) reportSummaryDialog.value.close();
+            };
+
+            // 调用后端接口获取统计数据
+            async function fetchSummary() {
+                console.log(summaryStart.value)
+                console.log(summaryEnd.value)
+                if (!summaryStart.value || !summaryEnd.value) {
+                    alert("请选择时间范围");
+                    return;
+                }
+
+                const res = await fetch(`/api/flow/summary?meterId=${summaryMeterId.value}&startTime=${summaryStart.value}&endTime=${summaryEnd.value}`);
+                summaryData.value = await res.json();
+            }
+
+
+
+
+
+
 
             // 窗口调整监听
             const handleResize = () => {
                 if (chartFlow.value) chartFlow.value.resize();
                 if (chartTotal.value) chartTotal.value.resize();
             };
+
+            // 全屏切换
+            const toggleFullscreen = () => {
+                if (!document.fullscreenElement) {
+                    document.documentElement.requestFullscreen?.()
+                } else {
+                    document.exitFullscreen?.()
+                }
+            }
+
+            // 导出EXCLE函数
+            const historyDataExportToExcel = () => {
+                if (!historyDataData.value || historyDataData.value.length === 0) {
+                    alert('没有数据可导出');
+                    return;
+                }
+
+                // 准备Excel数据
+                const headers = ['时间', '质量流量(t/h)', '质量总量(t)', '体积流量(m³/h)', '体积总量(m³)', '密度', '温度(℃)'];
+                const data = historyDataData.value.map(item => [
+                    item.timestamp.replace('T', ' '),
+                    item.massFlow,
+                    item.massTotal,
+                    item.volumeFlow,
+                    item.volumeTotal,
+                    item.density,
+                    item.temperature
+                ]);
+
+                // 创建工作簿
+                const worksheet = XLSX.utils.aoa_to_sheet([headers, ...data]);
+                const workbook = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(workbook, worksheet, '流量计数据');
+
+                // 生成文件名
+                const meterName = historyDataMeterId.value === '1' ? '流量计1' : '流量计2';
+                const fileName = `${meterName}_${historyDataStart.value}_${historyDataEnd.value}.xlsx`.replace(/:/g, '-');
+
+                // 导出文件
+                XLSX.writeFile(workbook, fileName);
+            };
+
+            // 报表统计
+            // 📊 报表统计 - 导出为 Excel
+            // 📋 报表统计 - 导出为 Excel
+            const reportExportToExcel = () => {
+                if (!summaryData.value) {
+                    alert('暂无统计数据可导出');
+                    return;
+                }
+
+                const meterName = summaryMeterId.value === '1' ? '流量计1' : '流量计2';
+                const startTime = summaryStart.value.replace('T', ' ');
+                const endTime = summaryEnd.value.replace('T', ' ');
+
+                // 1️⃣ 基本信息
+                const infoSection = [
+                    ['📊 报表统计查询'],
+                    [],
+                    ['流量计', meterName],
+                    ['起始时间', startTime],
+                    ['结束时间', endTime],
+                    [],
+                ];
+
+                // 2️⃣ 首尾记录
+                const startRecord = summaryData.value.startRecord || {};
+                const endRecord = summaryData.value.endRecord || {};
+
+                const recordSection = [
+                    ['📅 时间段内首尾数据'],
+                    ['以下为系统在所选时间段内找到的首条与末条记录：'],
+                    [],
+                    ['类型', '采集时间', '累计质量 (t)', '累计体积 (m³)'],
+                    [
+                        '开始记录',
+                        startRecord.timestamp ? startRecord.timestamp.replace('T', ' ') : '',
+                        startRecord.massTotal || '',
+                        startRecord.volumeTotal || ''
+                    ],
+                    [
+                        '结束记录',
+                        endRecord.timestamp ? endRecord.timestamp.replace('T', ' ') : '',
+                        endRecord.massTotal || '',
+                        endRecord.volumeTotal || ''
+                    ],
+                    [],
+                ];
+
+                // 3️⃣ 统计结果
+                const resultSection = [
+                    ['📊 统计结果'],
+                    ['根据首尾数据计算得出以下统计结果：'],
+                    [],
+                    ['项目', '起止时间', '统计值', '单位'],
+                    [
+                        '累计质量总量',
+                        `${startTime} - ${endTime}`,
+                        summaryData.value.massTotalDiff || '',
+                        't'
+                    ],
+                    [
+                        '累计体积总量',
+                        `${startTime} - ${endTime}`,
+                        summaryData.value.volumeTotalDiff || '',
+                        'm³'
+                    ],
+                ];
+
+                // 🧩 合并所有部分
+                const worksheetData = [
+                    ...infoSection,
+                    ...recordSection,
+                    ...resultSection
+                ];
+
+                // 生成 Sheet
+                const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+                const workbook = XLSX.utils.book_new();
+                XLSX.utils.book_append_sheet(workbook, worksheet, '报表统计');
+
+                // 生成文件名
+                const fileName = `${meterName}_报表统计_${startTime}_${endTime}.xlsx`
+                    .replace(/[:\s]/g, '-');
+
+                // 导出
+                XLSX.writeFile(workbook, fileName);
+            };
+
+
+
+
 
             // 监听图表索引变化
             Vue.watch(chartIndex, (newVal) => {
@@ -496,18 +861,26 @@
                 flowData1,
                 flowData2,
                 chartIndex,
-                reportDialog,
-                reportMeterId,
-                reportStart,
-                reportEnd,
-                reportData,
+                historyDataDialog,
+                historyDataMeterId,
+                historyDataStart,
+                historyDataEnd,
+                historyDataData,
+                isDialogOpen,
                 prevChart,
                 nextChart,
-                showReportDialog,
-                closeReportDialog,
-                fetchReport,
-                printReport
-            };
+                showHistoryDataDialog,
+                closeHistoryDataDialog,
+                fetchHistoryData,
+                toggleFullscreen,
+                historyDataExportToExcel,
+
+                // 报表统计
+                reportSummaryDialog,summaryMeterId,summaryStart,summaryEnd,summaryData,showReportDialog,closeReportDialog,fetchSummary,reportExportToExcel
+
+
+
+        };
         }
     }).mount('#app');
 </script>

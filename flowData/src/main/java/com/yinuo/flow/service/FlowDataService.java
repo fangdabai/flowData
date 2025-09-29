@@ -10,7 +10,9 @@ import org.springframework.stereotype.Service;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Describe:
@@ -96,6 +98,58 @@ public class FlowDataService {
         );
     }
 
+
+    // 4. 根据时间范围查询 质量总量差值和体积总量差值（包含起点终点记录）
+    public Map<String, Object> getSummary(int meterId, LocalDateTime startTime, LocalDateTime endTime) {
+        // 获取开始时间之前的最新记录
+        FlowData startData = flowDataMapper.selectOne(
+                new QueryWrapper<FlowData>()
+                        .eq("meter_id", meterId)
+                        .le("timestamp", startTime)
+                        .orderByDesc("timestamp")
+                        .last("limit 1")
+        );
+
+        // 获取结束时间之前的最新记录
+        FlowData endData = flowDataMapper.selectOne(
+                new QueryWrapper<FlowData>()
+                        .eq("meter_id", meterId)
+                        .le("timestamp", endTime)
+                        .orderByDesc("timestamp")
+                        .last("limit 1")
+        );
+
+        Map<String, Object> result = new HashMap<>();
+        result.put("meterId", meterId);
+        result.put("startTime", startTime);
+        result.put("endTime", endTime);
+
+        if (startData != null) {
+            Map<String, Object> startInfo = new HashMap<>();
+            startInfo.put("timestamp", startData.getTimestamp());
+            startInfo.put("massTotal", startData.getMassTotal());
+            startInfo.put("volumeTotal", startData.getVolumeTotal());
+            result.put("startRecord", startInfo);
+        }
+
+        if (endData != null) {
+            Map<String, Object> endInfo = new HashMap<>();
+            endInfo.put("timestamp", endData.getTimestamp());
+            endInfo.put("massTotal", endData.getMassTotal());
+            endInfo.put("volumeTotal", endData.getVolumeTotal());
+            result.put("endRecord", endInfo);
+        }
+
+        if (startData != null && endData != null) {
+            result.put("massTotalDiff", endData.getMassTotal() - startData.getMassTotal());
+            result.put("volumeTotalDiff", endData.getVolumeTotal() - startData.getVolumeTotal());
+        } else {
+            result.put("massTotalDiff", null);
+            result.put("volumeTotalDiff", null);
+        }
+
+        return result;
+    }
 
 }
 
