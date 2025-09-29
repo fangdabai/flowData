@@ -50,14 +50,6 @@ public class FlowDataService {
     }
 
 
-
-
-
-
-
-
-
-
     // 1. 获取实时最新数据 + 通讯状态
     public FlowData getCurrentData(int meterId) {
         List<FlowData> list = flowDataMapper.selectList(

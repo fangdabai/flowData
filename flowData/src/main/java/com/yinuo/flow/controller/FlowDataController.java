@@ -29,7 +29,6 @@ public class FlowDataController {
         this.service = service;
     }
 
-
     // 1. 获取指定流量计实时最新数据
     @GetMapping("/{meterId}/current")
     public FlowData getCurrent(@PathVariable int meterId) {
@@ -63,10 +62,6 @@ public class FlowDataController {
 
         return service.getSummary(meterId, startTime, endTime);
     }
-
-
-
-
 
 }
 
